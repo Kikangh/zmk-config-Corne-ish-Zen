@@ -140,7 +140,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-        label = "BÉPO";
+        label = "BEPO";
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
 // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
@@ -221,7 +221,7 @@
         };
 
          screen_layer {
-         label = "BT_SCREEN";
+         label = "SCREEN";
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
 // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
