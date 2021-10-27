@@ -26,6 +26,11 @@
             key-positions = <18 30>;
             bindings = <&kp RET>;
         };
+        combo_ret2 {
+            timeout-ms = <50>;
+            key-positions = <29 38>;
+            bindings = <&kp RET>;
+        };
         combo_bspc {
             timeout-ms = <50>;
             key-positions = <7 19>;
@@ -53,27 +58,27 @@
         };
         combo_cut {
             timeout-ms = <50>;
-            key-positions = <2 14>;
+            key-positions = <3 15>;
             bindings = <&kp LG(C)>;
         };
         combo_copy {
             timeout-ms = <50>;
-            key-positions = <3 15>;
+            key-positions = <4 16>;
             bindings = <&kp LG(H)>;
         };
         combo_paste {
             timeout-ms = <50>;
-            key-positions = <4 16>;
+            key-positions = <5 17>;
             bindings = <&kp LG(U)>;
         };
         combo_paste_without_format {
             timeout-ms = <50>;
-            key-positions = <5 17>;
+            key-positions = <2 14>;
             bindings = <&kp LG(LA(LS(U)))>;
         };
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <16 17>;
+            key-positions = <28 29>;
             bindings = <&kp TAB>;
         };
         combo_shift-tab {
@@ -93,7 +98,7 @@
         };
         combo_cmd-tab {
             timeout-ms = <50>;
-            key-positions = <17 29>;
+            key-positions = <16 17>;
             bindings = <&kp LG(TAB)>;
         };
     };
@@ -120,7 +125,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS2";
             #binding-cells = <2>;
-            tapping-term-ms = <260>;
+            tapping-term-ms = <300>;
             quick_tap_ms = <0>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
@@ -147,10 +152,10 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |        |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
             bindings = <
-&kp ESC   &kp Q       &kp W        &kp E           &kp R         &kp T                          &kp Y            &kp U       &kp I         &kp O        &kp P           &kp BSPC
-&kp LSHFT &ht ARROW A &hm1 LCTRL S &hm1 LALT D     &hm1 LGUI F   &kp G                          &kp H            &hm1 RGUI J &hm1 RALT K   &hm1 RCTRL L &hm1 RSHFT SEMI &kp SQT
-&kp F3    &kp Z       &kp X        &kp C           &kp V         &lt SCREEN B                   &kp N            &kp M       &kp COMMA     &kp DOT      &kp FSLH        &kp BSLH
-                                   &lt 1 LG(LA(H)) &mt LSHFT RET &mt LGUI SPACE                 &lt NUMBER SPACE &lt 2 RBKT  &kp RC(SPACE)
+&kp ESC        &kp Q       &kp W        &kp E           &kp R         &kp T                          &kp Y            &kp U       &kp I         &kp O        &kp P           &kp BSPC
+&hm2 LSHFT TAB &ht ARROW A &hm1 LCTRL S &hm1 LALT D     &hm1 LGUI F   &kp G                          &kp H            &hm1 RGUI J &hm1 RALT K   &hm1 RCTRL L &hm1 RSHFT SEMI &kp SQT
+&kp F3         &kp Z       &kp X        &kp C           &kp V         &lt SCREEN B                   &kp N            &kp M       &kp COMMA     &kp DOT      &kp FSLH        &kp BSLH
+                                        &lt 1 LG(LA(H)) &mt LSHFT TAB &mt LGUI SPACE                 &lt NUMBER SPACE &lt 2 RBKT  &kp RC(SPACE)
             >;
         };
 
@@ -163,10 +168,10 @@
 // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <                       
-&trans   &kp F1            &kp F2    &kp F3           &kp F4       &kp F5                       &kp LA(LC(LS(Y))) &kp LA(LC(LS(U)))    &kp LA(LC(LS(I)))     &kp LA(LC(LS(O)))    &none                        &kp F12
-&kp F6   &kp F7            &kp F8    &kp F9           &kp F10      &kp F11                      &kp LA(LC(LS(H))) &kp LA(LC(LS(LEFT))) &kp LA(LC(LS(UP)))    &kp LA(LC(LS(DOWN))) &hm1 RSHFT LA(LC(LS(RIGHT))) &none
-&kp CAPS &kp LG(LA(LS(U))) &kp LG(C) &kp LG(H)        &kp LG(F12)  &kp F12                      &kp LA(LC(LS(N))) &kp LC(LG(M))        &kp LA(LC(LS(COMMA))) &kp LA(LC(LS(DOT)))  &kp RG(RS(FSLH))             &kp LA(LC(LG(J)))
-                                     &trans           &trans       &trans                       &trans            &trans               &trans     
+&trans   &kp F1            &kp F2    &kp F3    &kp F4       &kp F5               &kp LA(LC(LS(Y))) &kp LA(LC(LS(U)))    &kp LA(LC(LS(I)))     &kp LA(LC(LS(O)))    &none                        &kp F12
+&kp F6   &kp F7            &kp F8    &kp F9    &kp F10      &kp F11              &kp LA(LC(LS(H))) &kp LA(LC(LS(LEFT))) &kp LA(LC(LS(UP)))    &kp LA(LC(LS(DOWN))) &hm1 RSHFT LA(LC(LS(RIGHT))) &none
+&kp CAPS &kp LG(LA(LS(U))) &kp LG(C) &kp LG(H) &kp LG(F12)  &kp F12              &kp LA(LC(LS(N))) &kp LC(LG(M))        &kp LA(LC(LS(COMMA))) &kp LA(LC(LS(DOT)))  &kp RG(RS(FSLH))             &kp LA(LC(LG(J)))
+                                     &trans    &trans       &trans               &trans            &trans               &trans     
             >;
         };
 
