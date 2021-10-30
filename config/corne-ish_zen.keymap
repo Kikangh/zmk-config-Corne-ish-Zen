@@ -103,11 +103,6 @@
         };
         combo_cmd-tab2 {
             timeout-ms = <250>;
-            key-positions = <16 0>;
-            bindings = <&kp LG(TAB)>;
-        };
-        combo_cmd-tab3 {
-            timeout-ms = <250>;
             key-positions = <38 0>;
             bindings = <&kp LG(TAB)>;
         };
