@@ -214,7 +214,7 @@
 // |AppsForceQuit        | FileMailOutlook     | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
 //                                             |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
-&kp ESC               &kp LA(LC(LG(LS(R)))) &KP HOME     &kp LG(UP)   &kp END       &kp LA(LC(LS(SPACE)))               &none     &none  &none  &kp LG(SQT)     &kp C_VOL_UP &trans
+&kp ESC               &kp LA(LC(LG(LS(R)))) &kp HOME     &kp LG(UP)   &kp END       &kp LA(LC(LS(SPACE)))               &none     &none  &none  &kp LG(SQT)     &kp C_VOL_UP &trans
 &kp LA(LC(LG(LS(R)))) &kp RA(RG(G))         &kp LG(LEFT) &kp LG(DOWN) &kp LG(U)     &kp LC(LS(SPACE))                   &kp PG_UP &none  &none  &kp LG(LS(SQT)) &kp C_VOL_DN &kp LA(LG(SEMI))
 &kp LA(LG(ESC))       &kp LC(F)             &kp PG_UP    &none        &kp PG_DN     &kp LC(LG(SPACE))                   &kp PG_DN &trans &trans &trans          &kp C_MUTE   &trans
                                                          &trans       &trans        &trans                              &trans    &trans &trans  
