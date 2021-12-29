@@ -217,17 +217,16 @@
 
         raise_layer {
         label = "RAISE";
-// ----------------------------------------------------------------------------------------------------------
-// |                     |NewOmniFocTaskFromTxt| BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-// |NewOmniFocTaskFromTxt| INS                 | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
-// |                     | ALT                 | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-// |AppsForceQuit        | FileMailOutlook     | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-//                                             |      |       |       |      |      |  |      |      |      |       |      |
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------
+// |                     |NewOmniFocTaskFromTxt| BT2        |  BT3         |  BT4       |  BT5 |                |      |      |       |      |       |       |
+// |NewOmniFocTaskFromTxt| INS                 | PSCR       | GUI          |            |      |                | PGUP |      |   ^   |      |       |       |
+// |AppsForceQuit        | FileMailOutlook     | HookCpyLk  | HookCpyMDLk  | HookToLink |      |                |      |      |       |      |       |       |
+//                                                          |              |            | Hook |                |      |      |       |
             bindings = <
-&kp ESC               &kp LA(LC(LG(LS(R)))) &kp HOME     &kp LG(UP)   &kp END       &kp LA(LC(LS(SPACE)))               &none     &none  &none  &kp LG(SQT)     &kp C_VOL_UP &trans
-&kp LA(LC(LG(LS(R)))) &kp RA(RG(G))         &kp LG(LEFT) &kp LG(DOWN) &kp LG(U)     &kp LC(LS(SPACE))                   &kp PG_UP &none  &none  &kp LG(LS(SQT)) &kp C_VOL_DN &kp LA(LG(SEMI))
-&kp LA(LG(ESC))       &kp LC(F)             &kp PG_UP    &none        &kp PG_DN     &kp LC(LG(SPACE))                   &kp PG_DN &trans &trans &trans          &kp C_MUTE   &trans
-                                                         &trans       &trans        &trans                              &trans    &trans &trans  
+&kp ESC               &kp LA(LC(LG(LS(R)))) &kp HOME              &kp LG(UP)            &kp END               &kp LA(LC(LS(SPACE)))               &none     &none  &none  &kp LG(SQT)     &kp C_VOL_UP &trans
+&kp LA(LC(LG(LS(R)))) &kp RA(RG(G))         &kp LG(LEFT)          &kp LG(DOWN)          &kp LG(U)             &kp LC(LS(SPACE))                   &kp PG_UP &none  &none  &kp LG(LS(SQT)) &kp C_VOL_DN &kp LA(LG(SEMI))
+&kp LA(LG(ESC))       &kp LC(F)             &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LC(LG(SPACE))                   &kp PG_DN &trans &trans &trans          &kp C_MUTE   &trans
+                                                                  &trans                &trans                &kp LG(LS(SPACE))                   &trans    &trans &trans  
             >;
         };
 
