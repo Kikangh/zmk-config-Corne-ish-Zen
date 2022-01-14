@@ -239,7 +239,7 @@
 // |       |  =  |  -  |  +   |  {   |  }   |                   |  [   |  ]    |WkfyMvUP|WkfyMvDwn|   \   |       |
 //                     |      |      |      |                   |  SPC |WkfyPrev|WkfyNext|
             bindings = <
-&to 0  &none        &kp LC(N1)   &kp LC(N2)    &kp LG(LS(SQT)) &kp BSPC                       &kp N6           &kp LA(LG(LS(V))) &kp LC(LS(TAB))  &kp LC(TAB)      &none            &kp BSPC
+&to 0  &none        &kp LC(LEFT) &kp LC(RIGHT) &kp LG(LS(SQT)) &kp BSPC                       &kp N6           &kp LA(LG(LS(V))) &kp LC(LS(TAB))  &kp LC(TAB)      &none            &kp BSPC
 &trans &trans       &kp LCTRL    &kp LALT      &kp LGUI        &kp LS(LA(LG(SPACE)))          &kp TILDE        &kp LEFT          &kp UP           &kp DOWN         &kp RIGHT        &none
 &reset &none        &kp LG(LEFT) &kp LA(LEFT)  &kp LA(RIGHT)   &kp LG(RIGHT)                  &kp LS(N)        &kp GRAVE         &kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(FSLH)) &kp RA(RC(RG(J)))
                                  &kp LG(LA(H)) &kp LSHFT       &trans                         &hm1 RSHFT SPACE &kp LC(LS(N9))    &kp LC(LS(N0))
