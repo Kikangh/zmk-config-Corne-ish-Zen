@@ -44,27 +44,27 @@
         combo_b {
             timeout-ms = <50>;
             key-positions = <18 19>;
-            bindings = <&kp Q>;
+            bindings = <&kp LS(TAB)>;
         };
         combo_w {
             timeout-ms = <50>;
             key-positions = <19 31>;
-            bindings = <&kp RBKT>;
+            bindings = <&kp RBKT>; //BP_W
         };
         combo_m {
             timeout-ms = <50>;
             key-positions = <20 32>;
-            bindings = <&kp SQT>;
+            bindings = <&kp SQT>; //BP_M
         };
         combo_cced {
             timeout-ms = <50>;
             key-positions = <21 33>;
-            bindings = <&kp BSLH>;
+            bindings = <&kp BSLH>; //BP_CCED
         };
         combo_z {
             timeout-ms = <50>;
             key-positions = <8 20>;
-            bindings = <&kp LBKT>;
+            bindings = <&kp LBKT>; //BP_Z
         };
         combo_arrow {
             timeout-ms = <50>;
@@ -74,47 +74,47 @@
         combo_cut {
             timeout-ms = <50>;
             key-positions = <2 14>;
-            bindings = <&kp LG(C)>;
+            bindings = <&kp LG(C)>; //BP_CUT
         };
         combo_copy {
             timeout-ms = <50>;
             key-positions = <3 15>;
-            bindings = <&kp LG(H)>;
+            bindings = <&kp LG(H)>; //BP_COPY
         };
         combo_paste {
             timeout-ms = <50>;
             key-positions = <4 16>;
-            bindings = <&kp LG(U)>;
+            bindings = <&kp LG(U)>; //BP_PASTE
         };
         combo_paste_without_format {
             timeout-ms = <50>;
             key-positions = <5 17>;
-            bindings = <&kp LG(LA(LS(U)))>;
+            bindings = <&kp LG(LA(LS(U)))>; //BP_PASTE_WITHOUT_FORMAT
         };
         combo_cancel {
             timeout-ms = <50>;
             key-positions = <16 28>;
-            bindings = <&kp LG(LBKT)>;
+            bindings = <&kp LG(LBKT)>; //BP_UNDO
         };
         combo_redo {
             timeout-ms = <50>;
             key-positions = <15 27>;
-            bindings = <&kp LG(LS(LBKT))>;
+            bindings = <&kp LG(LS(LBKT))>; //BP_REDO
         };
         combo_tab {
             timeout-ms = <50>;
             key-positions = <28 29>;
-            bindings = <&kp TAB>;
+            bindings = <&kp LG(TAB)>;
         };
         combo_shift-tab {
             timeout-ms = <50>;
             key-positions = <30 31>;
-            bindings = <&kp LS(TAB)>;
+            bindings = <&kp Q>; //BP_B
         };
         combo_cmd-tab {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            bindings = <&kp LG(TAB)>;
+            bindings = <&kp TAB>;
         };
         combo_left-space {
             timeout-ms = <30>;
