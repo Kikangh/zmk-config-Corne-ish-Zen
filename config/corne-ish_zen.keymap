@@ -118,7 +118,7 @@
         };
         combo_left-space {
             timeout-ms = <30>;
-            key-positions = <2 3>;
+            key-positions = <6 7>;
             bindings = <&kp LC(LEFT)>;
         };
         combo_right-space {
