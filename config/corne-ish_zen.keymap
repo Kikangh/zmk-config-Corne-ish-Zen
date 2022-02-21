@@ -28,7 +28,7 @@
         };
         combo_ret2 {
             timeout-ms = <50>;
-            key-positions = <17 29>;
+            key-positions = <16 28>;
             bindings = <&kp RET>;
         };
         combo_bspc {
@@ -93,7 +93,7 @@
         };
         combo_cancel {
             timeout-ms = <50>;
-            key-positions = <16 28>;
+            key-positions = <17 29>;
             bindings = <&kp LG(LBKT)>; //BP_UNDO
         };
         combo_redo {
