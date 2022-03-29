@@ -245,7 +245,7 @@
             >;
         };
 
-        number_layer {^
+        number_layer {
         label = "NUMBERS";
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
