@@ -193,10 +193,10 @@
 //                     | LOWER/ | TAB / | CMD/SPC |                   | NUMBER/ | RAISE/ | RC+SPC|
 //                     | CLPBD H| LSHFT |                             | SPACE   |  W     | 
             bindings = <
-&kp TAB   &kp Q       &kp W        &kp E               &kp R         &kp T                          &kp Y            &kp U           &kp I         &kp O        &kp P           &kp BSPC
-&kp LSHFT &ht ARROW A &hm1 LCTRL S &hm1 LALT D         &hm1 LGUI F   &kp G                          &kp H            &hm1 RGUI J     &hm1 RALT K   &hm1 RCTRL L &hm1 RSHFT SEMI &kp SQT
-&kp F3    &kp Z       &kp X        &kp C               &kp V         &lt SCREEN B                   &kp N            &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp BSLH
-                                   &lt LOWER LG(LA(H)) &ht ARROW Q   &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE RBKT  &hm1 RSHFT RC(SPACE)
+&kp TAB   &kp Q       &kp W        &kp E               &kp R           &kp T                          &kp Y            &kp U         &kp I         &kp O        &kp P           &kp BSPC
+&kp LSHFT &ht ARROW A &hm1 LCTRL S &hm1 LALT D         &hm1 LGUI F     &kp G                          &kp H            &hm1 RGUI J   &hm1 RALT K   &hm1 RCTRL L &hm1 RSHFT SEMI &kp SQT
+&kp F3    &kp Z       &kp X        &kp C               &kp V           &lt SCREEN B                   &kp N            &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp BSLH
+                                   &lt LOWER LG(LA(H)) &hm1 LSHFT LBKT &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE RET &hm1 RSHFT RC(SPACE)
             >;
         };
 
@@ -232,17 +232,16 @@
 
         arrow_layer {
         label = "ARROW";
-// ----------------------------------------------------------------------------------------------------------------
-// |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8    |  F9     |  F10  |  F11  |
-// | `     |   1 |   2 |   3  |   4  |   5  |                   |   6  |   7   |   8    |   9     |    0  |  F12  |
-// |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *     |  (      |   )   |   |   |
-// |       |  =  |  -  |  +   |  {   |  }   |                   |  [   |  ]    |WkfyMvUP|WkfyMvDwn|   \   |       |
-//                     |      |      |      |                   |  SPC |WkfyPrev|WkfyNext|
+// --------------------------------------------------------------------------------------------------------------------------------------------------
+// | TO 0  | none| LeftDesk | RightDesk | WkfyMirror  |  BSPC         |                   |  @   |  F7    |  F8    |  F9     |  F10    |  F11       |
+// | Trans |Trans|          |           |             |  HookCpyMDLk  |                   |  #   |  Left  |  UP    |  Down   | Right   |  None      |
+// |       |     |    Cut   |  Copy     |   Paste     |PasteWOutFormat|                   |  ?   |  $/€   |WkfyMvUP|WkfyMvDwn|TxTXSearch|TxTXDisable|
+//                          |           |   LSHFT     |     trans     |                   |  SPC |WkfyPrev|WkfyNext|
             bindings = <
-&to 0  &none        &kp LC(LEFT) &kp LC(RIGHT) &kp LG(LS(SQT)) &kp BSPC                       &kp N6           &kp LA(LG(LS(V))) &kp LC(LS(TAB))  &kp LC(TAB)      &none            &kp BSPC
-&trans &trans       &kp LCTRL    &kp LALT      &kp LGUI        &kp LS(LA(LG(SPACE)))          &kp TILDE        &kp LEFT          &kp UP           &kp DOWN         &kp RIGHT        &none
-&reset &none        &kp LG(LEFT) &kp LA(LEFT)  &kp LA(RIGHT)   &kp LG(RIGHT)                  &kp LS(N)        &kp GRAVE         &kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(LA(FSLH))) &kp RA(RC(RG(J)))
-                                 &kp LG(LA(H)) &kp LSHFT       &trans                         &hm1 RSHFT SPACE &kp LC(LS(N9))    &kp LC(LS(N0))
+&to 0  &none        &kp LC(LEFT) &kp LC(RIGHT) &kp LG(LS(SQT)) &kp BSPC                       &kp LA(N6)       &kp LA(LG(LS(SQT))) &kp LC(LS(TAB))  &kp LC(TAB)      &none             &kp BSPC
+&trans &trans       &kp LCTRL    &kp LALT      &kp LGUI        &kp LS(LA(LG(SPACE)))          &kp EQUAL        &kp LEFT            &kp UP           &kp DOWN         &kp RIGHT         &none
+&reset &none        &kp LG(LBKT) &kp LG(M)     &kp LG(FSLH)    &kp LS(LA(LG(FSLH)))           &kp LS(O)        &kp GRAVE           &kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
+                                 &kp LG(LA(H)) &kp LSHFT       &trans                         &hm1 RSHFT SPACE &kp LC(LS(N9))      &kp LC(LS(N0))
             >;
         };
 
@@ -255,10 +254,10 @@
 // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
 // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
-            bindings = <
+            bindings = €
 &trans          &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
-&hm2 LSHFT CAPS &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5                 &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp MINUS
-&kp F10         &kp GRAVE &kp LS(G) &kp LS(V) &trans    &kp LA(E)                 &kp G     &none     &none     &trans    &none     &kp EQUAL
+&hm2 LSHFT CAPS &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5                 &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp N9
+&kp F10         &kp GRAVE &kp LS(G) &kp LS(V) &trans    &kp LA(E)                 &kp G     &none     &none     &trans    &none     &kp N6
                                     &kp LCTRL &kp LALT  &trans                    &trans    &kp RCTRL  &kp RALT
             >;
         };
