@@ -49,22 +49,22 @@
         combo_w {
             timeout-ms = <50>;
             key-positions = <19 31>;
-            bindings = <&kp RBKT>; //BP_W
+            bindings = <&kp RBKT>; //BP_W  OPT_Ç
         };
         combo_m {
             timeout-ms = <50>;
             key-positions = <20 32>;
-            bindings = <&kp SQT>; //BP_M
+            bindings = <&kp SQT>; //BP_M OPT_^
         };
         combo_cced {
             timeout-ms = <50>;
             key-positions = <21 33>;
-            bindings = <&kp BSLH>; //BP_CCED
+            bindings = <&kp BSLH>; //BP_CCED OPT_Z
         };
         combo_z {
             timeout-ms = <50>;
             key-positions = <8 20>;
-            bindings = <&kp LBKT>; //BP_Z
+            bindings = <&kp LBKT>; //BP_Z OPT_X
         };
         combo_arrow {
             timeout-ms = <50>;
@@ -74,43 +74,43 @@
         combo_cut {
             timeout-ms = <50>;
             key-positions = <2 14>;
-            bindings = <&kp LG(C)>; //BP_CUT
+            bindings = <&kp LG(LBKT)>; //OPT_CUT
         };
         combo_copy {
             timeout-ms = <50>;
             key-positions = <3 15>;
-            bindings = <&kp LG(H)>; //BP_COPY
+            bindings = <&kp LG(M)>; //OPT_COPY
         };
         combo_paste {
             timeout-ms = <50>;
             key-positions = <4 16>;
-            bindings = <&kp LG(U)>; //BP_PASTE
+            bindings = <&kp LG(FSLH)>; //OPT_PASTE
         };
         combo_paste_without_format {
             timeout-ms = <50>;
             key-positions = <5 17>;
-            bindings = <&kp LG(LA(LS(U)))>; //BP_PASTE_WITHOUT_FORMAT
+            bindings = <&kp LG(LA(LS(FSLH)))>; //OPT_PASTE_WITHOUT_FORMAT
         };
-        combo_cancel {
+        combo_undo {
             timeout-ms = <50>;
             key-positions = <17 29>;
-            bindings = <&kp LG(LBKT)>; //BP_UNDO
+            bindings = <&kp LG(BSLH)>; //OPT_UNDO
         };
         combo_redo {
             timeout-ms = <50>;
             key-positions = <15 27>;
-            bindings = <&kp LG(LS(LBKT))>; //BP_REDO
+            bindings = <&kp LG(LS(BSLH))>; //OPT_REDO
         };
         combo_tab {
             timeout-ms = <50>;
             key-positions = <28 29>;
             bindings = <&kp LG(TAB)>;
         };
-        combo_shift-tab {
-            timeout-ms = <50>;
-            key-positions = <30 31>;
-            bindings = <&kp Q>; //BP_B
-        };
+//        combo_shift-tab {
+//            timeout-ms = <50>;
+//            key-positions = <30 31>;
+//            bindings = <&kp Q>; //BP_B
+//        };
         combo_cmd-tab {
             timeout-ms = <50>;
             key-positions = <16 17>;
@@ -185,7 +185,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-        label = "BEPO";
+        label = "OPTIM";
 // ------------------- --------------------------------------------------------------------------------------------------
 // |  TAB  |  B  |  É  |    P   |   O   |   È     |                   |  ^      |  V     |  D    |  L   |   J   | BKSPC |
 // | LSHFT |  A  |  U  |    I   |   E   |   ,     |                   |  C      |  T     |  S    |  R   |   N   |   M   |
@@ -223,8 +223,8 @@
 // |AppsForceQuit        | FileMailOutlook     | HookCpyLk  | HookCpyMDLk  | HookToLink |      |                |      |      |       |      |       |       |
 //                                                          |              |            | Hook |                |      |      |       |
             bindings = <
-&kp ESC               &kp LA(LC(LG(LS(R)))) &kp HOME              &kp LG(UP)            &kp END               &kp LA(LC(LS(SPACE)))               &none     &none  &none  &kp LG(SQT)     &kp C_VOL_UP &trans
-&kp LA(LC(LG(LS(R)))) &kp RA(RG(G))         &kp LG(LEFT)          &kp LG(DOWN)          &kp LG(U)             &kp LC(LS(SPACE))                   &kp PG_UP &none  &none  &kp LG(LS(SQT)) &kp C_VOL_DN &kp LA(LG(SEMI))
+&kp ESC               &kp LA(LC(LG(LS(R)))) &kp HOME              &kp LG(UP)            &kp END               &kp LA(LC(LS(SPACE)))               &none     &none  &none  &kp LG(COMMA)     &kp C_VOL_UP &trans
+&kp LA(LC(LG(LS(R)))) &kp RA(RG(G))         &kp LG(LEFT)          &kp LG(DOWN)          &kp LG(U)             &kp LC(LS(SPACE))                   &kp PG_UP &none  &none  &kp LG(LS(COMMA)) &kp C_VOL_DN &kp LA(LG(SEMI))
 &kp LA(LG(ESC))       &kp LC(F)             &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LC(LG(SPACE))                   &kp PG_DN &trans &trans &trans          &kp C_MUTE   &trans
                                                                   &trans                &trans                &kp LG(LS(SPACE))                   &trans    &trans &trans  
             >;
@@ -240,7 +240,7 @@
             bindings = <
 &to 0  &none        &kp LC(LEFT) &kp LC(RIGHT) &kp LG(LS(SQT)) &kp BSPC                       &kp LA(N6)       &kp LA(LG(LS(A))) &kp LC(LS(TAB))  &kp LC(TAB)      &none             &kp BSPC
 &trans &trans       &kp LCTRL    &kp LALT      &kp LGUI        &kp LS(LA(LG(SPACE)))          &kp EQUAL        &kp LEFT            &kp UP           &kp DOWN         &kp RIGHT         &none
-&reset &none        &kp LG(LBKT) &kp LG(M)     &kp LG(FSLH)    &kp LS(LA(LG(FSLH)))           &kp LS(O)        &kp GRAVE           &kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
+&reset &none        &kp LG(D) &kp LG(M)     &kp LG(FSLH)    &kp LS(LA(LG(FSLH)))           &kp LS(O)        &kp GRAVE           &kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
                                  &kp LG(LA(H)) &kp LSHFT       &trans                         &hm1 RSHFT SPACE &kp LC(LS(N9))      &kp LC(LS(N0))
             >;
         };
