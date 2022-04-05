@@ -51,10 +51,10 @@
             key-positions = <19 31>;
             bindings = <&kp RBKT>; //BP_W  OPT_CCED
         };
-        combo_right_x {
+        combo_optcirc {
             timeout-ms = <50>;
             key-positions = <20 32>;
-            bindings = <&kp LBKT>; //BP_M OPT_X
+            bindings = <&kp SQT>; //BP_M OPT_CIRC
         };
         combo_left_x {
             timeout-ms = <50>;
