@@ -199,7 +199,7 @@
 //                     | CLPBD H| LSHFT |                             | SPACE   |  W     | 
             bindings = <
 &kp TAB   &kp Q       &kp W        &kp E               &kp R           &kp T                          &kp Y            &kp U         &kp I         &kp O        &kp P           &kp BSPC
-&kp CAPS  &ht ARROW A &hm1 LCTRL S &hm1 LALT D         &hm1 LGUI F     &kp G                          &kp H            &hm1 RGUI J   &hm1 RALT K   &hm1 RCTRL L &hm1 RSHFT SEMI &kp SQT
+&kp F10   &ht ARROW A &hm1 LCTRL S &hm1 LALT D         &hm1 LGUI F     &kp G                          &kp H            &hm1 RGUI J   &hm1 RALT K   &hm1 RCTRL L &hm1 RSHFT SEMI &kp SQT
 &kp F3    &kp Z       &kp X        &kp C               &kp V           &ht SCREEN B                   &kp N            &kp M         &kp COMMA     &kp DOT      &kp FSLH        &kp RBKT
                                    &lt LOWER LG(LA(H)) &hm1 LSHFT LBKT &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE RET &hm1 RSHFT RC(SPACE)
             >;
