@@ -203,10 +203,10 @@
 //                     | LOWER/ | TAB / | CMD/SPC |                   | NUMBER/ | RAISE/ | RC+SPC|
 //                     | CLPBD H| LSHFT |                             | SPACE   |  W     | 
             bindings = <
-&kp TAB        &kp Q        &kp W        &kp E               &kp R          &kp T                          &kp Y            &kp U          &kp I                &kp O        &kp P           &kp BSPC
-&hm2 LSHFT F10 &hm1 LSHFT A &hm1 LCTRL S &hm1 LALT D         &hm1 LGUI F    &kp G                          &kp H            &hm1 RGUI J    &hm1 RALT K          &hm1 RCTRL L &hm1 RSHFT SEMI &kp SQT
-&kp F3         &kp Z        &kp X        &kp C               &kp V          &ht SCREEN B                   &kp N            &kp M          &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
-                                         &lt LOWER LG(LA(H)) &ht ARROW LBKT &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE CAPS &hm1 RSHFT RC(SPACE)
+&kp TAB        &kp Q       &kp W        &kp E               &kp R           &kp T                          &kp Y            &kp U          &kp I                &kp O        &kp P           &kp BSPC
+&hm2 LSHFT F10 &ht ARROW A &hm1 LCTRL S &hm1 LALT D         &hm1 LGUI F     &kp G                          &kp H            &hm1 RGUI J    &hm1 RALT K          &hm1 RCTRL L &hm1 RSHFT SEMI &kp SQT
+&kp F3         &kp Z       &kp X        &kp C               &kp V           &ht SCREEN B                   &kp N            &kp M          &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
+                                        &lt LOWER LG(LA(H)) &hm2 RSHFT LBKT &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE CAPS &hm1 RSHFT RC(SPACE)
             >;
         };
 
@@ -249,26 +249,24 @@
 //                          |           |   LSHFT     |     trans     |                   |  SPC |WkfyPrev|WkfyNext|
             bindings = <
 &to 0  &none        &kp LC(LEFT) &kp LC(RIGHT) &kp LG(LS(I)) &kp BSPC                       &kp MINUS        &kp LA(LG(LS(A))) &kp LC(LS(TAB))  &kp LC(TAB)      &none             &kp BSPC
-&trans &kp LSHFT    &kp LCTRL    &kp LALT      &kp LGUI      &kp LS(LA(LG(SPACE)))          &kp EQUAL        &kp LEFT          &kp UP           &kp DOWN         &kp RIGHT         &kp NON_US_BSLH
-&reset &none        &kp LG(LBKT) &kp LG(M)     &kp LG(FSLH)  &kp LS(LA(LG(FSLH)))           &kp LS(O)        &kp GRAVE         &kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
+&trans &kp LSHFT    &kp LCTRL    &kp LALT      &kp LGUI      &kp LS(LA(LG(SPACE)))          &kp EQUAL        &kp LEFT          &kp UP           &kp DOWN         &kp RIGHT         &none
+&reset &none        &kp LG(LBKT) &kp LG(M)     &kp LG(FSLH)  &kp LS(LA(LG(FSLH)))           &kp NON_US_BACKSLASH       &kp GRAVE         &kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
                                  &kp LG(LA(H)) &trans        &trans                         &hm1 RSHFT SPACE &kp LG(LS(N9))    &kp LG(LS(N0))
             >;
         };
 
         number_layer {
         label = "NUMBERS";
-// TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
-// |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
-// | `     |   1 |   2 |   3  |   4  |   5  |                   |   6  |   7   |   8   |   9  |    0  |  F12  |
-// |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
-// |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
-//               |     |      |      |      |        |  |       |      |       |       |      |
+// | TAB   |  «° |  °» |  "   |  -   |  +      |                   |  *   |  /    |  =    |  (   |   )   |  BSPC |
+// | LSHFT |   1 |   2 |   3  |   4  |   5     |                   |   6  |   7   |   8   |   9  |    0  |   @/_ |
+// | F10   |  ?? |  ;  |  :   |  .   |   &     |                   |  ,   |   No  |   No  |      |   No  |   #/% |
+//                     | LCTRL| LALT |CMD/space|                   | togg | RCTRL | RALT  |
             bindings = <            
-&trans          &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
-&hm2 LSHFT CAPS &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5                 &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp MINUS
-&kp F10         &kp GRAVE &kp LS(G) &kp LS(V) &trans    &kp LA(E)                 &kp G     &none     &none     &trans    &none     &kp EQUAL
-                                    &kp LCTRL &kp LALT  &trans                    &trans    &kp RCTRL  &kp RALT
+&trans    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
+&kp LSHFT &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5                 &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp MINUS
+&kp F10   &kp GRAVE &kp LS(G) &kp LS(V) &trans    &kp LA(J)                 &kp G     &none     &none     &trans    &none     &kp EQUAL
+                              &kp LCTRL &kp LALT  &trans                    &trans    &kp RCTRL  &kp RALT
             >;
         };
 
