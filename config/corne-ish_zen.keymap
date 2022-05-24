@@ -204,8 +204,8 @@
 //                     | CLPBD H| LSHFT |                             | SPACE   |  W     | 
             bindings = <
 &kp TAB        &kp Q       &kp W        &kp E               &kp R           &kp T                          &kp Y            &kp U          &kp I                &kp O        &kp P           &kp BSPC
-&hm2 LSHFT F3 &ht ARROW A &hm1 LCTRL S &hm1 LALT D         &hm1 LGUI F     &kp G                          &kp H            &hm1 RGUI J    &hm1 RALT K          &hm1 RCTRL L &hm1 RSHFT SEMI &kp SQT
-&kp F10         &kp Z       &kp X        &kp C               &kp V           &ht SCREEN B                   &kp N            &kp M          &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
+&kp LSHFT      &ht ARROW A &hm1 LCTRL S &hm1 LALT D         &hm1 LGUI F     &kp G                          &kp H            &hm1 RGUI J    &hm1 RALT K          &hm1 RCTRL L &hm1 RSHFT SEMI &kp SQT
+&kp F10        &kp Z       &kp X        &kp C               &kp V           &ht SCREEN B                   &kp N            &kp M          &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
                                         &lt LOWER LG(LA(H)) &hm1 RSHFT LBKT &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE CAPS &hm1 RSHFT RC(SPACE)
             >;
         };
@@ -248,7 +248,7 @@
 // |       |     |    Cut   |  Copy     |   Paste     |PasteWOutFormat|                   |  ?   |  $/€   |WkfyMvUP|WkfyMvDwn|TxTXSearch|TxTXDisable|
 //                          |           |   LSHFT     |     trans     |                   |  SPC |WkfyPrev|WkfyNext|
             bindings = <
-&to 0  &none        &kp LC(LEFT) &kp LC(RIGHT) &kp LG(LS(I)) &kp BSPC                       &kp MINUS        &kp LA(LG(LS(A))) &kp LC(LS(TAB))  &kp LC(TAB)      &none             &kp BSPC
+&to 0  &none        &kp LC(LEFT) &kp LC(RIGHT) &kp LG(LS(COMMA)) &kp BSPC                       &kp MINUS        &kp LA(LG(LS(A))) &kp LC(LS(TAB))  &kp LC(TAB)      &none             &kp BSPC
 &trans &kp LSHFT    &kp LCTRL    &kp LALT      &kp LGUI      &kp LS(LA(LG(SPACE)))          &kp EQUAL        &kp LEFT          &kp UP           &kp DOWN         &kp RIGHT         &none
 &reset &none        &kp LG(LBKT) &kp LG(M)     &kp LG(FSLH)  &kp LS(LA(LG(FSLH)))           &kp NON_US_BACKSLASH       &kp GRAVE         &kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
                                  &kp LG(LA(H)) &trans        &trans                         &hm1 RSHFT SPACE &kp LG(LS(N9))    &kp LG(LS(N0))
