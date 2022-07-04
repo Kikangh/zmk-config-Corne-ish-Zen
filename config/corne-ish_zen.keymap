@@ -194,7 +194,8 @@
             compatible = "zmk,behavior-hold-tap";
             label = "CAPS WORD LAYER";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <260>;
+            //quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&caps_word>;
         };
@@ -214,7 +215,7 @@
             bindings = <
 &kp TAB        &kp Q       &kp W        &kp E               &kp R           &kp T                          &kp Y            &kp U          &kp I                &kp O        &kp P           &kp BSPC
 &kp LSHFT      &ht ARROW A &hm1 LCTRL S &hm1 LALT D         &hm1 LGUI F     &kp G                          &kp H            &hm1 RGUI J    &hm1 RALT K          &hm1 RCTRL L &hm1 RSHFT SEMI &kp SQT
-&kp F10        &kp Z       &kp X        &kp C               &kp V           &ht SCREEN B                   &kp N            &kp M          &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
+&kp F3        &kp Z       &kp X        &kp C               &kp V           &ht SCREEN B                   &kp N            &kp M          &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
                                         &lt LOWER LG(LA(H)) &hm1 RSHFT LBKT &mt LGUI SPACE                 &lt NUMBER SPACE &cwl RAISE 0   &hm1 RSHFT RC(SPACE)
             >;
         };
@@ -229,7 +230,7 @@
             bindings = <                       
 &kp ESC &kp F1 &kp F2 &kp F3 &kp F4      &kp F5               &kp LA(LC(LS(Y))) &kp LA(LC(LS(U)))    &kp LA(LC(LS(I)))     &kp LA(LC(LS(O)))    &none                        &kp F12
 &kp F6  &kp F7 &kp F8 &kp F9 &kp F10     &kp F11              &kp LA(LC(LS(H))) &kp LA(LC(LS(LEFT))) &kp LA(LC(LS(UP)))    &kp LA(LC(LS(DOWN))) &hm1 RSHFT LA(LC(LS(RIGHT))) &none
-&kp F3 &none  &none  &none  &kp LG(F12) &kp F12              &kp LA(LC(LS(N))) &kp LC(LG(P))        &kp LA(LC(LS(COMMA))) &kp LA(LC(LS(DOT)))  &none                        &kp LA(LC(LG(J)))
+&kp F10 &none  &none  &none  &kp LG(F12) &kp F12              &kp LA(LC(LS(N))) &kp LC(LG(P))        &kp LA(LC(LS(COMMA))) &kp LA(LC(LS(DOT)))  &none                        &kp LA(LC(LG(J)))
                       &trans &trans      &trans               &trans            &trans               &trans     
             >;
         };
