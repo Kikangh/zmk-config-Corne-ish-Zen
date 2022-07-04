@@ -251,9 +251,9 @@
 //                          |           |   LSHFT     |     trans     |                   |  SPC |WkfyPrev|WkfyNext|
             bindings = <
 &to 0  &none        &kp LC(LEFT) &kp LC(RIGHT) &kp LG(LS(COMMA)) &kp BSPC                   &kp MINUS            &kp LG(LS(N8)) &kp LC(LS(TAB))  &kp LC(TAB)      &none             &kp BSPC
-&trans &kp LSHFT    &kp LCTRL    &kp LALT      &kp LGUI      &kp LS(LA(LG(SPACE)))          &kp EQUAL            &kp LEFT       d&kp UP           &kp DOWN         &kp RIGHT         &none
-&reset &none        &kp LG(LBKT) &kp LG(M)     &kp LG(FSLH)  &kp LS(LA(LG(FSLH)))           &kp NON_US_BACKSLASH &kp GRAVE      d&kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
-                                 &kp LG(LA(H)) &trans        &trans                         &hm1 RSHFT SPACE     &kp LG(LS(N9)) d&kp LG(LS(N0))
+&trans &kp LSHFT    &kp LCTRL    &kp LALT      &kp LGUI      &kp LS(LA(LG(SPACE)))          &kp EQUAL            &kp LEFT       &kp UP           &kp DOWN         &kp RIGHT         &none
+&reset &none        &kp LG(LBKT) &kp LG(M)     &kp LG(FSLH)  &kp LS(LA(LG(FSLH)))           &kp NON_US_BACKSLASH &kp GRAVE      &kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
+                                 &kp LG(LA(H)) &trans        &trans                         &hm1 RSHFT SPACE     &kp LG(LS(N9)) &kp LG(LS(N0))
             >;
         };
 
