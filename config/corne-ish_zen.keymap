@@ -231,10 +231,10 @@
 // |       |  =  |  -  |  +   |DoNotDist |  F12 |                   |  [   |  ]    |  ;    |  :   |   \   |       |
 //               |     |      |          |      |                   |      |       |       |      |
             bindings = <                       
-&kp ESC &kp F1 &kp F2 &kp F3 &kp F4      &kp F5               &kp LA(LC(LS(Y))) &kp LA(LC(LS(U)))    &kp LA(LC(LS(I)))     &kp LA(LC(LS(O)))    &none                        &kp F12
-&kp F6  &kp F7 &kp F8 &kp F9 &kp F10     &kp F11              &kp LA(LC(LS(H))) &kp LA(LC(LS(LEFT))) &kp LA(LC(LS(UP)))    &kp LA(LC(LS(DOWN))) &hm1 RSHFT LA(LC(LS(RIGHT))) &none
-&kp F10 &none  &none  &none  &kp LG(F12) &kp F12              &kp LA(LC(LS(N))) &kp LC(LG(P))        &kp LA(LC(LS(COMMA))) &kp LA(LC(LS(DOT)))  &none                        &kp LA(LC(LG(J)))
-                      &trans &trans      &trans               &trans            &trans               &trans     
+&kp ESC &kp F1 &kp F2 &kp F3 &kp F4      &kp F5               &kp LA(LC(LS(Y)))        &kp LA(LC(LS(U)))        &kp LA(LC(LS(I)))         &kp LA(LC(LS(O)))    &none                        &kp F12
+&kp F6  &kp F7 &kp F8 &kp F9 &kp F10     &kp F11              &kp LA(LC(LS(H)))        &kp LA(LC(LS(LEFT)))     &kp LA(LC(LS(UP)))        &kp LA(LC(LS(DOWN))) &hm1 RSHFT LA(LC(LS(RIGHT))) &none
+&kp F10 &none  &none  &none  &kp LG(F12) &kp F12              &kp LA(LC(LS(N)))        &kp LC(LG(P))            &kp LA(LC(LS(COMMA)))     &kp LA(LC(LS(DOT)))  &none                        &none
+                      &trans &trans      &trans               &kp LG(LA(LC(LS(LEFT)))) &kp LG(LA(LC(LS(DOWN)))) &kp LG(LA(LC(LS(RIGHT))))      
             >;
         };
 
