@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
 #define LOWER   1
@@ -215,7 +216,7 @@
             bindings = <
 &kp TAB        &kp Q       &kp W        &kp E               &kp R           &kp T                          &kp Y            &kp U          &kp I                &kp O        &kp P           &kp BSPC
 &kp LSHFT      &ht ARROW A &hm1 LCTRL S &hm1 LALT D         &hm1 LGUI F     &kp G                          &kp H            &hm1 RGUI J    &hm1 RALT K          &hm1 RCTRL L &hm1 RSHFT SEMI &kp SQT
-&kp F10         &kp Z       &kp X        &kp C               &kp V           &ht SCREEN B                   &kp N            &kp M          &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
+&kp F10        &kp Z       &kp X        &kp C               &kp V           &ht SCREEN B                   &kp N            &kp M          &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
                                         &lt LOWER LG(LA(H)) &hm1 RSHFT LBKT &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE CAPS &hm1 RSHFT RC(SPACE)
             >;
             //code pour utiler Caps_Word : &cwl RAISE 0 (pas adapté à Optimot au 04/07/2022; les keycodes Qwerty sont pris en compte, et même si on peut
@@ -245,11 +246,11 @@
 // |NewOmniFocTaskFromTxt| INS                 | PSCR       | GUI          |            |      |                | PGUP |      |   ^   |      |       |       |
 // |AppsForceQuit        | FileMailOutlook     | HookCpyLk  | HookCpyMDLk  | HookToLink |      |                |      |      |       |      |       |       |
 //                                                          |              |            | Hook |                |      |      |       |
-            bindings = <
-&kp ESC               &kp LA(LC(LG(LS(R)))) &kp HOME              &kp LG(UP)            &kp END               &kp LA(LC(LS(SPACE)))               &none     &none  &none  &kp LG(COMMA)     &kp C_VOL_UP &trans
-&kp LA(LC(LG(LS(R)))) &kp RA(RG(G))         &kp LG(LEFT)          &kp LG(DOWN)          &kp LG(RIGHT)         &kp LC(LS(SPACE))                   &kp PG_UP &none  &none  &kp LG(LS(COMMA)) &kp C_VOL_DN &kp LA(LG(SEMI))
-&kp LA(LG(ESC))       &kp LC(D)             &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LC(LG(SPACE))                   &kp PG_DN &trans &trans &trans            &kp C_MUTE   &trans
-                                                                  &trans                &trans                &kp LG(LS(SPACE))                   &trans    &trans &trans  
+            bindings = <  
+&kp ESC               &kp LA(LC(LG(LS(R)))) &kp HOME              &mkp MOVE_UP          &kp END               &kp LA(LC(LS(SPACE)))               &none            &none            &none             &kp LG(COMMA)     &kp C_VOL_UP &trans
+&kp LA(LC(LG(LS(R)))) &kp RA(RG(G))         &mkp MOVE_LEFT        &mkp MOVE_DOWN        &mkp MOVE_RIGHT       &kp LC(LS(SPACE))                   &mkp SCROLL_UP   &mkp LCLK        &mkp RCLK         &kp LG(LS(COMMA)) &kp C_VOL_DN &kp LA(LG(SEMI))
+&kp LA(LG(ESC))       &kp LC(D)             &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LC(LG(SPACE))                   &mkp SCROLL_DOWN &mkp SCROLL_LEFT &mkp SCROLL_RIGHT &trans            &kp C_MUTE   &trans
+                                                                  &trans                &trans                &kp LG(LS(SPACE))                   &trans           &trans           &trans  
             >;
         };
 
