@@ -2,12 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/LOWPROKB
-    - name: caksoylar
-      url-base: https://github.com/caksoylar/
+    - name: Kikangh
+      url-base: https://github.com/Kikangh/
   projects:
     - name: zmk
-      remote: caksoylar
-      revision: caksoylar/zen+969+1098+mouse
+      remote: Kikangh
+      revision: Kikangh/main
       import: app/west.yml
   self:
     path: config
