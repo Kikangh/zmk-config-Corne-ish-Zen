@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/LOWPROKB
     - name: Kikangh
-      url-base: https://github.com/Kikangh/
+      url-base: https://github.com/Kikangh
   projects:
     - name: zmk
       remote: Kikangh
