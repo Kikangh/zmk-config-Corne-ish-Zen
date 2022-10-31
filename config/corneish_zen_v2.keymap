@@ -8,7 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/mouse.h>
+/*#include <dt-bindings/zmk/mouse.h>*/
 
 #define DEFAULT 0
 #define LOWER   1
@@ -247,9 +247,9 @@
 // |AppsForceQuit        | FileMailOutlook     | HookCpyLk  | HookCpyMDLk  | HookToLink |      |                |      |      |       |      |       |       |
 //                                                          |              |            | Hook |                |      |      |       |
             bindings = <  
-&kp ESC               &kp LA(LC(LG(LS(R)))) &kp HOME              &mkp MOVE_UP          &kp END               &kp LA(LC(LS(SPACE)))               &none            &none            &none             &kp LG(COMMA)     &kp C_VOL_UP &trans
-&kp LA(LC(LG(LS(R)))) &kp RA(RG(G))         &mkp MOVE_LEFT        &mkp MOVE_DOWN        &mkp MOVE_RIGHT       &kp LC(LS(SPACE))                   &mkp SCROLL_UP   &mkp LCLK        &mkp RCLK         &kp LG(LS(COMMA)) &kp C_VOL_DN &kp LA(LG(SEMI))
-&kp LA(LG(ESC))       &kp LC(D)             &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LC(LG(SPACE))                   &mkp SCROLL_DOWN &mkp SCROLL_LEFT &mkp SCROLL_RIGHT &trans            &kp C_MUTE   &trans
+&kp ESC               &kp LA(LC(LG(LS(R)))) &kp HOME              &none /*&mkp MOVE_UP*/          &kp END               &kp LA(LC(LS(SPACE)))               &none            &none            &none             &kp LG(COMMA)     &kp C_VOL_UP &trans
+&kp LA(LC(LG(LS(R)))) &kp RA(RG(G))         &none /*&mkp MOVE_LEFT*/         &none /*&mkp MOVE_DOWN*/        &none /*&mkp MOVE_RIGHT*/       &kp LC(LS(SPACE))                   &none /*&mkp SCROLL_UP*/   &none /*&mkp LCLK*/        &none /*&mkp RCLK*/         &kp LG(LS(COMMA)) &kp C_VOL_DN &kp LA(LG(SEMI))
+&kp LA(LG(ESC))       &kp LC(D)             &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LC(LG(SPACE))                   &none /*&mkp SCROLL_DOWN*/ &none /*&mkp SCROLL_LEFT*/ &none /*&mkp SCROLL_RIGHT*/ &trans            &kp C_MUTE   &trans
                                                                   &trans                &trans                &kp LG(LS(SPACE))                   &trans           &trans           &trans  
             >;
         };

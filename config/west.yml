@@ -2,12 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/LOWPROKB
-    - name : Kikangh
-      url-base: https://github.com/Kikangh
   projects:
     - name: zmk
-      remote: Kikangh
-      revision: Corneish_zen_v2
+      remote: zmkfirmware
+      revision: corne-ish-zen-v2
       import: app/west.yml
   self:
     path: config
