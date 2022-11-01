@@ -251,15 +251,15 @@
         raise_layer {
         label = "RAISE";
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------
-// |                     |NewOmniFocTaskFromTxt| BT2        |  BT3         |  BT4       |  BT5 |                |      |      |       |      |       |       |
-// |NewOmniFocTaskFromTxt| INS                 | PSCR       | GUI          |            |      |                | PGUP |      |   ^   |      |       |       |
+// |                     |NewOmniFocTaskFromTxt| HOME       | MouseUP      |  END       |Spotlight|                |      |      |       |      |       |       |
+// |NewOmniFocTaskFromTxt| INS                 | Mouseleft  | MouseDwn     | MouseRght  |      |                | PGUP |      |   ^   |      |       |       |
 // |AppsForceQuit        | FileMailOutlook     | HookCpyLk  | HookCpyMDLk  | HookToLink |      |                |      |      |       |      |       |       |
 //                                                          |              |            | Hook |                |      |      |       |
             bindings = <  
-&kp ESC               &kp LA(LC(LG(LS(R)))) &kp HOME              &mmv MOVE_VERT(-3500)  &kp END               &kp LA(LC(LS(SPACE)))               &none       &none                &none                &kp LG(COMMA)         &kp C_VOL_UP        &trans
-&kp LA(LC(LG(LS(R)))) &kp RA(RG(G))         &mmv MOVE_HOR(-3500)  &mmv MOVE_VERT(3500) &mmv MOVE_HOR(3500)   &kp LC(LS(SPACE))                   &kp C_MUTE  &mkp LCLK            &mkp RCLK            &kp LG(LS(COMMA))     &kp C_VOL_DN        &kp LA(LG(SEMI))
-&kp LA(LG(ESC))       &kp LC(D)             &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LC(LG(SPACE))                   &none       &mwh SCROLL_HOR(-15) &mwh SCROLL_VERT(15) &mwh SCROLL_VERT(-15) &mwh SCROLL_HOR(15) &trans
-                                                                  &trans                &trans                &kp LG(LS(SPACE))                   &trans      &trans               &trans  
+&kp ESC               &kp LA(LC(LG(LS(R)))) &kp HOME              &mmv MOVE_VERT(-3500) &kp END               &kp LA(LC(LS(SPACE)))               &kp C_MUTE &kp C_VOL_UP        &kp C_VOL_DN          &kp LG(COMMA)        &trans               &trans
+&kp LA(LC(LG(LS(R)))) &kp RA(RG(G))         &mmv MOVE_HOR(-3500)  &mmv MOVE_VERT(3500)  &mmv MOVE_HOR(3500)   &kp LC(LS(SPACE))                   &kp PG_UP  &mkp LCLK           &mkp RCLK             &kp LG(LS(COMMA))    &kp LA(LG(SEMI))     &trans
+&kp LA(LG(ESC))       &kp LC(D)             &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LC(LG(SPACE))                   &kp PG_DN  &mwh SCROLL_HOR(15) &mwh SCROLL_VERT(-15) &mwh SCROLL_VERT(15) &mwh SCROLL_HOR(-15) &trans
+                                                                  &trans                &trans                &kp LG(LS(SPACE))                   &trans     &trans              &trans  
             >;
         };
 
