@@ -66,11 +66,11 @@
             key-positions = <20 32>;
             bindings = <&kp SQT>; //BP_M OPT_CIRC
         };
-        combo_left_x {
-            timeout-ms = <50>;
-            key-positions = <15 27>;
-            bindings = <&kp LBKT>; //BP_M OPT_X
-        };
+//        combo_left_x {
+//            timeout-ms = <50>;
+//            key-positions = <15 27>;
+//            bindings = <&kp LBKT>; //BP_M OPT_X
+//        };
 //        combo_cced {
 //            timeout-ms = <50>;
 //            key-positions = <21 33>;
