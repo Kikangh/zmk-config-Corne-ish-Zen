@@ -196,7 +196,7 @@
             label = "HOMEROW_MODS_LEFTH";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <260>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -207,7 +207,7 @@
             label = "HOMEROW_MODS_RIGHTH";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <260>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -227,7 +227,7 @@
             label = "HOMEROW_LAYERTAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <260>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&mo>, <&kp>;
