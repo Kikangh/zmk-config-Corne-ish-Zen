@@ -231,7 +231,7 @@
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <37>;
+            hold-trigger-key-positions = <2 3 4 5 15 16 17 25 26 27 28 29 37 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
         };
         cwl: caps_word_layer{
             compatible = "zmk,behavior-hold-tap";
