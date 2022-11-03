@@ -191,15 +191,27 @@
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
-        hm3: homerow_mods3 {
+        hml: homerow_mods_left_hand {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS3";
+            label = "HOMEROW_MODS_LEFTH";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <260>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>
+        };
+        hmr: homerow_mods_right_hand {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_RIGHTH";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <260>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>
         };
         ht: homerow_layertap {
             compatible = "zmk,behavior-hold-tap";
@@ -244,9 +256,9 @@
 //                     | CLPBD H| LSHFT |                             | SPACE   |  W     | 
             bindings = <
 &kp TAB        &kp Q        &kp W        &kp E               &kp R           &kp T                          &kp Y            &kp U          &kp I                &kp O        &kp P           &kp BSPC
-&kp LSHFT      &ht2 ARROW A &hm3 LCTRL S &hm3 LALT D         &hm3 LGUI F     &kp G                          &kp H            &hm3 RGUI J    &hm3 RALT K          &hm3 RCTRL L &hm3 RSHFT SEMI &kp SQT
+&kp LSHFT      &ht2 ARROW A &hml LCTRL S &hml LALT D         &hml LGUI F     &kp G                          &kp H            &hmr RGUI J    &hmr RALT K          &hmr RCTRL L &hmr RSHFT SEMI &kp SQT
 &kp F10        &kp Z        &kp X        &kp C               &kp V           &ht SCREEN B                   &kp N            &kp M          &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
-                                         &lt LOWER LG(LA(H)) &hm3 RSHFT LBKT &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE CAPS &hm3 RSHFT RC(SPACE)
+                                         &lt LOWER LG(LA(H)) &hml RSHFT LBKT &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE CAPS &hm2 RSHFT RC(SPACE)
             >;
             //code pour utiler Caps_Word : &cwl RAISE 0 (pas adapté à Optimot au 04/07/2022; les keycodes Qwerty sont pris en compte, et même si on peut
             // faire en sorte que certains keycodes ne désactivent pas Caps, je ne vois pas pour le moment comment faire pour que des keycodes
