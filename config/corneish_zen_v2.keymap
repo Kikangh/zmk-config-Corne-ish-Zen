@@ -63,25 +63,30 @@
             key-positions = <18 19>;
             bindings = <&kp LS(TAB)>;
         };
-        combo_w {
-            timeout-ms = <50>;
-            key-positions = <19 31>;
-            bindings = <&kp RBKT>; //BP_W  OPT_CCED
-        };
-        combo_optcirc {
+        combo_opt-x {
             timeout-ms = <50>;
             key-positions = <20 32>;
-            bindings = <&kp SQT>; //BP_M OPT_CIRC
+            bindings = <&kp LBKT>; //  OPT_X
+        };
+        combo_opt-w {
+            timeout-ms = <50>;
+            key-positions = <19 31>;
+            bindings = <&kp B>; // OPT_W
+        };
+        combo_cced2{
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&kp RBKT>; //OPT_CIRC
         };
 //        combo_left_x {
 //            timeout-ms = <50>;
 //            key-positions = <15 27>;
-//            bindings = <&kp LBKT>; //BP_M OPT_X
+//            bindings = <&kp LBKT>; //OPT_X
 //        };
         combo_z {
             timeout-ms = <50>;
             key-positions = <8 20>;
-            bindings = <&kp BSLH>; //BP_Z OPT_Z
+            bindings = <&kp BSLH>; // OPT_Z
         };
         combo_arrow {
             timeout-ms = <50>;
@@ -118,17 +123,12 @@
             key-positions = <14 26>;
             bindings = <&kp LG(LS(BSLH))>; //OPT_REDO
         };
-        combo_tab {
+        combo_cmd-tab {
             timeout-ms = <50>;
             key-positions = <28 29>;
             bindings = <&kp LG(TAB)>;
         };
-        combo_circ{
-            timeout-ms = <50>;
-            key-positions = <30 31>;
-            bindings = <&kp SQT>; //OPT_CIRC
-        };
-        combo_cmd-tab {
+        combo_tab {
             timeout-ms = <50>;
             key-positions = <16 17>;
             bindings = <&kp TAB>;
