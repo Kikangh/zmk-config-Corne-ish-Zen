@@ -128,18 +128,18 @@
             key-positions = <16 17>;
             bindings = <&kp TAB>;
         };
-        combo_open-paren {
-            timeout-ms = <30>;
+        combo_omnipl-retrait {
+            timeout-ms = <50>;
             key-positions = <3 4>;
-            bindings = <&kp N9>;
+            bindings = <&kp G(LS(N0))>;
         };
-        combo_close-paren {
+        combo_omnipl-retraitneg{
             timeout-ms = <50>;
             key-positions = <7 8>;
-            bindings = <&kp N0>;
+            bindings = <&kp LG(LS(N9))>;
         };
         combo_left-space {
-            timeout-ms = <30>;
+            timeout-ms = <50>;
             key-positions = <27 28>;
             bindings = <&kp LC(LEFT)>;
         };
@@ -221,7 +221,7 @@
             label = "ALPHA_SFT_R";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <100>; //trying to see if quick right hm shift with X works better with 100 instead of 150
+            quick-tap-ms = <100>; //trying to see if quick right hm shift with X works better with 100 instead of 150. Note : since I moved X from inner left thumb key, this change might not be a good idea anymore.
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS_L>;
@@ -278,10 +278,10 @@
 //                     | LOWER/ | TAB / | CMD/ENTER |                   | NUMBER/ | RAISE/ | RC+SPC|
 //                     | CLPBD H| LSHFT |                             | SPACE   |  W     | 
             bindings = <
-&kp TAB        &kp Q        &kp W        &kp E               &kp R        &kp T                          &kp Y            &kp U          &kp I                &kp O        &kp P           &kp BSPC
-&kp LSHFT      &hll ARROW A &hml LCTRL S &hml LALT D         &hml LGUI F  &kp G                          &kp H            &hmr RGUI J    &hmr RALT K          &hmr RCTRL L &hsr RSHFT SEMI &kp SQT
-&kp F10        &kp Z        &kp X        &kp C               &kp V        &hll SCREEN B                   &kp N            &kp M          &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
-                                         &lt LOWER LG(LA(H)) &kp LSHFT    &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE CAPS &hsr RSHFT RC(SPACE)
+&kp TAB        &kp Q        &kp W        &kp E               &kp R         &kp T                          &kp Y            &kp U        &kp I                &kp O        &kp P           &kp BSPC
+&kp LSHFT      &hll ARROW A &hml LCTRL S &hml LALT D         &hml LGUI F   &kp G                          &kp H            &hmr RGUI J  &hmr RALT K          &hmr RCTRL L &hsr RSHFT SEMI &kp SQT
+&kp F10        &kp Z        &kp X        &kp C               &kp V         &hll SCREEN B                  &kp N            &kp M        &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
+                                         &lt LOWER LG(LA(H)) &hsl LSHFT N9 &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE N0 &hsr RSHFT RC(SPACE)
             >;
             //code pour utiler Caps_Word : &cwl RAISE 0 (pas adapté à Optimot au 04/07/2022; les keycodes Qwerty sont pris en compte, et même si on peut
             // faire en sorte que certains keycodes ne désactivent pas Caps, je ne vois pas pour le moment comment faire pour que des keycodes
@@ -320,16 +320,16 @@
 
         arrow_layer {
         label = "ARROW";
-// --------------------------------------------------------------------------------------------------------------------------------------------------
-// | TO 0  | none| LeftDesk | RightDesk | WkfyMirror  |  BSPC         |                   |  todo   |  todo    |  todo    |  todo     |  todo    |  todo       |
-// | Trans |Trans|          |           |             |  HookCpyMDLk  |                   |  #   |  Left  |  UP    |  Down   | Right   |  None      |
-// |       |     |    Cut   |  Copy     |   Paste     |PasteWOutFormat|                   |  ??ê?? |  $/€   |WkfyMvUP|WkfyMvDwn|TxTXSearch|TxTXDisable|
-//                          |           |   LSHFT     |     trans     |                   |  SPC |WkfyPrev|WkfyNext|
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+// | TO 0  | none| LeftDesk | RightDesk    | WkfyMirror  |  BSPC         |                   |  todo   |  todo    |  todo    |  todo     |  todo    |  todo       |
+// | Trans |Trans|          |              |             |  HookCpyMDLk  |                   |  #   |  Left  |  UP    |  Down   | Right   |  None      |
+// |       |     |          | WkfyNormSize |  WkfySmall  |  WkfyBigger   |                   |  ??ê?? |  $/€   |WkfyMvUP|WkfyMvDwn|TxTXSearch|TxTXDisable|
+//                          |              |   LSHFT     |     trans     |                   |  SPC |WkfyPrev|WkfyNext|
             bindings = <
-&to 0  &none     &kp LC(LEFT) &kp LC(RIGHT) &kp LG(LS(COMMA))   &kp BSPC                       &kp MINUS            &kp LG(LS(N8)) &kp LC(LS(TAB))  &kp LC(TAB)      &none             &kp BSPC
-&trans &trans    &kp LCTRL    &kp LALT      &kp LGUI            &kp LS(LA(LG(SPACE)))          &kp EQUAL            &kp LEFT       &kp UP           &kp DOWN         &kp RIGHT         &none
-&reset &none     &kp LG(LBKT) &kp LG(M)     &kp LG(FSLH)        &kp LS(LA(LG(FSLH)))           &kp NON_US_BACKSLASH &kp GRAVE      &kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
-                              &kp LG(LA(H)) &hsl RSHFT LS(LBKT) &mt LGUI RET                   &hm1 RSHFT SPACE     &kp LG(LS(N9)) &kp LG(LS(N0))
+&to 0  &none     &none        &none         &kp LG(LS(COMMA)) &kp BSPC                       &kp MINUS            &kp LG(LS(N8)) &kp LC(LS(TAB))  &kp LC(TAB)      &none             &kp BSPC
+&trans &trans    &kp LCTRL    &kp LALT      &kp LGUI          &kp LS(LA(LG(SPACE)))          &kp EQUAL            &kp LEFT       &kp UP           &kp DOWN         &kp RIGHT         &none
+&reset &none     &none        &kp LG(KP_N0) &kp LG(MINUS)     &kp LG(EQUAL)                  &kp NON_US_BACKSLASH &kp GRAVE      &kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
+                              &kp LG(LA(H)) &hsl RSHFT CAPS   &mt LGUI RET                   &hm1 RSHFT SPACE     &kp LG(LS(N9)) &kp LG(LS(N0))
             >;
         };
 
@@ -343,8 +343,8 @@
             bindings = <            
 &trans    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
 &kp LSHFT &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5                 &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp MINUS
-&kp CAPS  &kp GRAVE &kp LS(G) &kp LS(V) &trans    &kp LA(J)                 &kp G     &none     &none     &trans    &none     &kp EQUAL
-                              &kp LCTRL &kp LALT  &mt LGUI SPACE            &trans    &kp RCTRL  &kp RALT
+&trans    &kp GRAVE &kp LS(G) &kp LS(V) &trans    &kp LA(J)                 &kp G     &none     &none     &trans    &none     &kp EQUAL
+                              &kp LCTRL &kp LALT  &mt LGUI SPACE            &trans    &kp RCTRL &kp RALT
             >;
         };
 
