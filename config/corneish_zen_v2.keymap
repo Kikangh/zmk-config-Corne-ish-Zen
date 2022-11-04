@@ -128,12 +128,12 @@
             key-positions = <16 17>;
             bindings = <&kp TAB>;
         };
-        combo_omnipl-retrait {
+        combo_omnipl-recess {
             timeout-ms = <50>;
             key-positions = <3 4>;
-            bindings = <&kp G(LS(N0))>;
+            bindings = <&kp LG(LS(N0))>;
         };
-        combo_omnipl-retraitneg{
+        combo_omnipl-neg recess {
             timeout-ms = <50>;
             key-positions = <7 8>;
             bindings = <&kp LG(LS(N9))>;
