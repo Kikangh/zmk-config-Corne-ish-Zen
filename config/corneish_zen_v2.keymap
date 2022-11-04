@@ -78,11 +78,6 @@
             key-positions = <30 31>;
             bindings = <&kp RBKT>; //OPT_CIRC
         };
-//        combo_left_x {
-//            timeout-ms = <50>;
-//            key-positions = <15 27>;
-//            bindings = <&kp LBKT>; //OPT_X
-//        };
         combo_z {
             timeout-ms = <50>;
             key-positions = <8 20>;
@@ -120,7 +115,7 @@
         };
         combo_redo {
             timeout-ms = <50>;
-            key-positions = <14 26>;
+            key-positions = <15 27>;
             bindings = <&kp LG(LS(BSLH))>; //OPT_REDO
         };
         combo_cmd-tab {
@@ -133,24 +128,29 @@
             key-positions = <16 17>;
             bindings = <&kp TAB>;
         };
-        combo_left-space {
+        combo_open-paren {
             timeout-ms = <30>;
             key-positions = <3 4>;
+            bindings = <&kp N9>;
+        };
+        combo_close-paren {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp N0)>;
+        };
+        combo_left-space {
+            timeout-ms = <30>;
+            key-positions = <27 28>;
             bindings = <&kp LC(LEFT)>;
         };
         combo_right-space {
             timeout-ms = <50>;
-            key-positions = <7 8>;
+            key-positions = <31 32>;
             bindings = <&kp LC(RIGHT)>;
         };
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-        combo_esc2 {
-            timeout-ms = <50>;
-            key-positions = <0 12>;
+            key-positions = <37 38>;
             bindings = <&kp ESC>;
         };
         combo_esc3 {
@@ -246,28 +246,6 @@
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
-//        hml: homerow_mods_left_hand {
-//            compatible = "zmk,behavior-hold-tap";
-//            label = "HOMEROW_MODS_LEFTH";
-//            #binding-cells = <2>;
-//            flavor = "tap-preferred";
-//            tapping-term-ms = <260>;
-//            quick-tap-ms = <125>;
-//            global-quick-tap;
-//            bindings = <&kp>, <&kp>;
-//            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
-//        };
-//        hmr: homerow_mods_right_hand {
-//            compatible = "zmk,behavior-hold-tap";
-//            label = "HOMEROW_MODS_RIGHTH";
-//            #binding-cells = <2>;
-//            flavor = "tap-preferred";
-//            tapping-term-ms = <260>;
-//            quick-tap-ms = <125>;
-//            global-quick-tap;
-//            bindings = <&kp>, <&kp>;
-//            hold-trigger-key-positions = <1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
-//        };
         ht: homerow_layertap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_LAYERTAP";
@@ -276,17 +254,6 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
-        };
-        ht2: homerow_layertap2 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYERTAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <260>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <2 3 4 5 15 16 17 25 26 27 28 29 37 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
         };
         cwl: caps_word_layer{
             compatible = "zmk,behavior-hold-tap";
@@ -311,10 +278,10 @@
 //                     | LOWER/ | TAB / | CMD/ENTER |                   | NUMBER/ | RAISE/ | RC+SPC|
 //                     | CLPBD H| LSHFT |                             | SPACE   |  W     | 
             bindings = <
-&kp TAB        &kp Q        &kp W        &kp E               &kp R           &kp T                          &kp Y            &kp U          &kp I                &kp O        &kp P           &kp BSPC
-&kp LSHFT      &hll ARROW A &hml LCTRL S &hml LALT D         &hml LGUI F     &kp G                          &kp H            &hmr RGUI J    &hmr RALT K          &hmr RCTRL L &hsr RSHFT SEMI &kp SQT
-&kp F10        &kp Z        &kp X        &kp C               &kp V           &ht SCREEN B                   &kp N            &kp M          &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
-                                         &lt LOWER LG(LA(H)) &hsl RSHFT LBKT &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE CAPS &hsr RSHFT RC(SPACE)
+&kp TAB        &kp Q        &kp W        &kp E               &kp R        &kp T                          &kp Y            &kp U          &kp I                &kp O        &kp P           &kp BSPC
+&kp LSHFT      &hll ARROW A &hml LCTRL S &hml LALT D         &hml LGUI F  &kp G                          &kp H            &hmr RGUI J    &hmr RALT K          &hmr RCTRL L &hsr RSHFT SEMI &kp SQT
+&kp F10        &kp Z        &kp X        &kp C               &kp V        &hll SCREEN B                   &kp N            &kp M          &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
+                                         &lt LOWER LG(LA(H)) &kp LSHFT    &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE CAPS &hsr RSHFT RC(SPACE)
             >;
             //code pour utiler Caps_Word : &cwl RAISE 0 (pas adapté à Optimot au 04/07/2022; les keycodes Qwerty sont pris en compte, et même si on peut
             // faire en sorte que certains keycodes ne désactivent pas Caps, je ne vois pas pour le moment comment faire pour que des keycodes
