@@ -1,0 +1,63 @@
+/*                KEY POSITIONS
+
+  ╭────────────────────────╮ ╭────────────────────────╮
+  │  0   1   2   3   4   5 │ │  6   7   8   9  10  11 │
+  │ 12  13  14  15  16  17 │ │ 18  19  20  21  22  23 │
+  │ 24  25  26  27  28  29 │ │ 30  31  32  33  34  35 │
+  ╰──────────╮  36  37  38 │ │ 39  40  41 ╭───────────╯
+             ╰─────────────╯ ╰────────────╯            */
+
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP) \
+        combo_##NAME { \
+            timeout-ms = <TERM>; \
+            bindings = <BINDINGS>; \
+            key-positions = <KEYPOS>; \
+            layers = <LAYERS>; \
+            global-quick-tap-ms = <QUICKTAP>; \
+        };
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+// Spacing combos
+COMBO(ret,        &kp RET,              18 30, OPTIM NUMBERS, 50, 100)
+COMBO(ret2,       &kp RET,              16 28, OPTIM NUMBERS, 50, 100)
+COMBO(bspc,       &kp BSPC,              7 19, OPTIM NUMBERS, 50, 100)
+COMBO(del,        &kp DEL,               6 18, OPTIM NUMBERS, 50, 100)
+COMBO(tab,        &kp TAB,              16 17, OPTIM NUMBERS, 50, 100)
+COMBO(stab,       &kp LS(TAB),          18 19, OPTIM NUMBERS, 50, 100)
+
+
+// Letters combos
+COMBO(op-x,       &kp LBKT,             20 32,         OPTIM, 50, 100)
+COMBO(op-w,       &kp B,                19 31,         OPTIM, 50, 100)
+COMBO(op-cced,    &kp RBKT,             30 31,         OPTIM, 50, 100)
+COMBO(op-z,       &kp BSLH,              8 20,         OPTIM, 50, 100)
+
+// Layers combos
+COMBO(lay-arrow,  &tog ARROW,         2  3  4,   OPTIM ARROW, 50, 100)
+
+// Editing combos
+COMBO(op-cut,     &kp LG(LBKT),          2 14,         OPTIM, 50, 100)
+COMBO(op-copy,    &kp LG(M),             3 15,         OPTIM, 50, 100)
+COMBO(op-paste,   &kp LG(FSLH),          4 16,         OPTIM, 50, 100)
+COMBO(op-pasttxt, &kp LG(LA(LS(FSLH))),  5 17,         OPTIM, 50, 100) //paste without formatting
+COMBO(op-undo,    &kp LG(BSLH),         17 29,         OPTIM, 50, 100)
+COMBO(op-redo,    &kp LG(LS(BSLH)),     15 27,         OPTIM, 50, 100)
+
+// Windows Management combos
+COMBO(cmd-tab,    &kp LG(TAB),          28 29,         OPTIM, 50, 100)
+COMBO(space-r,    &kp LC(RIGHT),         7  8,         OPTIM, 50, 100)
+COMBO(space-l,    &kp LC(LEFT),          3  4,         OPTIM, 50, 100)
+
+// Application specifics shorcuts
+    //OmniPlan
+COMBO(omnipl-identr, &kp LG(LS(N0)),    16 17,         ARROW, 50, 100)
+COMBO(omnipl-identl, &kp LG(LS(N9)),    17 18,         ARROW, 50, 100)
+
+// Escape combos
+COMBO(esc,           &kp ESC,        26 27 28,   0 1 2 3 4 5, 50, 100)
+
+    };
+};
