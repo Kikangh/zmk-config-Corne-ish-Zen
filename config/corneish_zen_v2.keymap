@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
-#include "combos.dtsi"
 
 #define OPTIM   0
 #define LOWER   1
@@ -17,6 +16,8 @@
 #define ARROW   3
 #define NUMBERS 4
 #define SCREEN  5
+
+#include "combos.dtsi"
 
 &kscan0 { debounce-period = <17>; };
 
