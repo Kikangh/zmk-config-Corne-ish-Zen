@@ -11,11 +11,11 @@
 #include <dt-bindings/zmk/mouse.h>
 #include "combos.dtsi"
 
-#define DEFAULT 0
+#define OPTIM   0
 #define LOWER   1
 #define RAISE   2
 #define ARROW   3
-#define NUMBER  4
+#define NUMBERS 4
 #define SCREEN  5
 
 &kscan0 { debounce-period = <17>; };
