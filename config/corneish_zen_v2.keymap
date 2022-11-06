@@ -148,9 +148,9 @@
 //                     | LOWER/ | TAB / | CMD/ENTER |                   | NUMBER/ | RAISE/ | RC+SPC|
 //                     | CLPBD H| LSHFT |                             | SPACE   |  W     | 
             bindings = <
-&kp TAB        &kp Q        &kp W        &kp E               &kp R         &kp T                          &kp Y             &kp U        &kp I                &kp O        &kp P           &kp BSPC
-&kp LSHFT      &hll ARROW A &hml LCTRL S &hml LALT D         &hml LGUI F   &kp G                          &kp H             &hmr RGUI J  &hmr RALT K          &hmr RCTRL L &hsr RSHFT SEMI &kp SQT
-&kp F10        &kp Z        &kp X        &kp C               &kp V         &hll SCREEN B                  &kp N             &kp M        &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
+&kp TAB        &kp Q        &kp W        &kp E               &kp R         &kp T                          &kp Y             &kp U        &kp I                &kp O        &kp P    &kp BSPC
+&kp LSHFT      &hll ARROW A &hml LCTRL S &hml LALT D         &hml LGUI F   &kp G                          &kp H             &hmr RGUI J  &hmr RALT K          &hmr RCTRL L &kp SEMI &kp SQT
+&kp F10        &kp Z        &kp X        &kp C               &kp V         &hll SCREEN B                  &kp N             &kp M        &kp COMMA            &kp DOT      &kp FSLH &kp RBKT
                                          &lt LOWER LG(LA(H)) &hsl LSHFT N9 &mt LGUI SPACE                 &lt NUMBERS SPACE &lt RAISE N0 &hsr RSHFT RC(SPACE)
 
             //code pour utiler Caps_Word : &cwl RAISE 0 (pas adapté à Optimot au 04/07/2022; les keycodes Qwerty sont pris en compte, et même si on peut
@@ -168,7 +168,7 @@
 //               |     |      |          |      |                   |      |       |       |      |
             bindings = <                       
 &kp ESC &kp F1 &kp F2 &kp F3 &kp F4      &kp F5               &kp LA(LC(LS(Y)))        &kp LA(LC(LS(U)))        &kp LA(LC(LS(I)))         &kp LA(LC(LS(O)))    &none                        &kp F12
-&kp F6  &kp F7 &kp F8 &kp F9 &kp F10     &kp F11              &kp LA(LC(LS(H)))        &kp LA(LC(LS(LEFT)))     &kp LA(LC(LS(UP)))        &kp LA(LC(LS(DOWN))) &hsr RSHFT LA(LC(LS(RIGHT))) &kp LS(LA(LC(LG(N))))
+&kp F6  &kp F7 &kp F8 &kp F9 &kp F10     &kp F11              &kp LA(LC(LS(H)))        &kp LA(LC(LS(LEFT)))     &kp LA(LC(LS(UP)))        &kp LA(LC(LS(DOWN))) &kp LA(LC(LS(RIGHT))) &kp LS(LA(LC(LG(N))))
 &kp F3  &none  &none  &none  &kp LG(F12) &kp F12              &kp LA(LC(LS(N)))        &kp LC(LG(P))            &kp LA(LC(LS(COMMA)))     &kp LA(LC(LS(DOT)))  &none                        &kp LS(LA(LC(LG(U))))
                       &trans &trans      &trans               &kp LG(LA(LC(LS(LEFT)))) &kp LG(LA(LC(LS(DOWN)))) &kp LG(LA(LC(LS(RIGHT))))      
             >;
