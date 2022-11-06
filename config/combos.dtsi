@@ -54,7 +54,7 @@ COMBO(space-l,    &kp LC(LEFT),          3  4,         OPTIM, 50, 100)
 // Application specifics shorcuts
     //OmniPlan
 COMBO(omnipl-identr, &kp LG(LS(N0)),    16 17,         ARROW, 50, 100)
-COMBO(omnipl-identl, &kp LG(LS(N9)),    17 18,         ARROW, 50, 100)
+COMBO(omnipl-identl, &kp LG(LS(N9)),    18 19,         ARROW, 50, 100)
 
 // Escape combos
 COMBO(esc,           &kp ESC,        26 27 28,   0 1 2 3 4 5, 50, 100)
