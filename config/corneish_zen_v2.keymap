@@ -17,7 +17,7 @@
 #define NUMBERS 4
 #define SCREEN  5
 
-// #include "combos.dtsi"
+#include "combos.dtsi"
 
 &kscan0 { debounce-period = <17>; };
 
@@ -116,7 +116,7 @@
             hold-trigger-key-positions = <KEYS_L THUMBS_L>;
             hold-trigger-on-release;
         };
-        cwl: caps_word_layer{
+        cwl: caps_word_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "CAPS WORD LAYER";
             #binding-cells = <2>;
@@ -142,20 +142,21 @@
         default_layer {
         label = "OPTIM";
 // ------------------- --------------------------------------------------------------------------------------------------
-// |  TAB  |  B  |  É  |    P   |   O   |   È     |                   |  ^      |  V     |  D    |  L   |   J   | BKSPC |
+// |  TAB  |  À  |  J  |    O   |   É   |   B     |                   |  ^      |  V     |  D    |  L   |   J   | BKSPC |
 // | LSHFT |  A  |  U  |    I   |   E   |   ,     |                   |  C      |  T     |  S    |  R   |   N   |   M   |
 // |MISSCTRL|  À  |  Y  |    X   |   .   |   K     |                   |  '      |  Q     |  G    |  H   |   F   |   Ç   |
 //                     | LOWER/ | TAB / | CMD/ENTER |                   | NUMBER/ | RAISE/ | RC+SPC|
 //                     | CLPBD H| LSHFT |                             | SPACE   |  W     | 
             bindings = <
-&kp TAB        &kp Q        &kp W        &kp E               &kp R         &kp T                          &kp Y            &kp U        &kp I                &kp O        &kp P           &kp BSPC
-&kp LSHFT      &hll ARROW A &hml LCTRL S &hml LALT D         &hml LGUI F   &kp G                          &kp H            &hmr RGUI J  &hmr RALT K          &hmr RCTRL L &hsr RSHFT SEMI &kp SQT
-&kp F10        &kp Z        &kp X        &kp C               &kp V         &hll SCREEN B                  &kp N            &kp M        &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
-                                         &lt LOWER LG(LA(H)) &hsl LSHFT N9 &mt LGUI SPACE                 &lt NUMBER SPACE &lt RAISE N0 &hsr RSHFT RC(SPACE)
-            >;
+&kp TAB        &kp Q        &kp W        &kp E               &kp R         &kp T                          &kp Y             &kp U        &kp I                &kp O        &kp P           &kp BSPC
+&kp LSHFT      &hll ARROW A &hml LCTRL S &hml LALT D         &hml LGUI F   &kp G                          &kp H             &hmr RGUI J  &hmr RALT K          &hmr RCTRL L &hsr RSHFT SEMI &kp SQT
+&kp F10        &kp Z        &kp X        &kp C               &kp V         &hll SCREEN B                  &kp N             &kp M        &kp COMMA            &kp DOT      &kp FSLH        &kp RBKT
+                                         &lt LOWER LG(LA(H)) &hsl LSHFT N9 &mt LGUI SPACE                 &lt NUMBERS SPACE &lt RAISE N0 &hsr RSHFT RC(SPACE)
+
             //code pour utiler Caps_Word : &cwl RAISE 0 (pas adapté à Optimot au 04/07/2022; les keycodes Qwerty sont pris en compte, et même si on peut
             // faire en sorte que certains keycodes ne désactivent pas Caps, je ne vois pas pour le moment comment faire pour que des keycodes
             // qwerty de lettres et qui sont par exemple , ou . en optimot désactives CAPS au lieu de le laisser actif).
+            >;
         };
 
         lower_layer {
@@ -203,7 +204,7 @@
             >;
         };
 
-        number_layer {
+        numbers_layer {
         label = "NUMBERS";
 // ------------------------------------------------------------------------------------------------------------
 // | TAB   |  «° |  °» |  "   |  -   |  +      |                   |  *   |  /    |  =    |  (   |   )   |  BSPC |
