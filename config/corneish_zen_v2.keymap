@@ -17,7 +17,7 @@
 #define NUMBERS 4
 #define SCREEN  5
 
-#include "combos.dtsi"
+// #include "combos.dtsi"
 
 &kscan0 { debounce-period = <17>; };
 
