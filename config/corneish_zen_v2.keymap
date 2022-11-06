@@ -11,8 +11,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include "keymap_optimot.h"
 
-#include "combos.dtsi" // Seems that this include **has** to be made after the layers' define, else it won't compile.
-
 #define OPTIM   0
 #define LOWER   1
 #define RAISE   2
@@ -20,7 +18,7 @@
 #define NUMBERS 4
 #define SCREEN  5
 
- 
+#include "combos.dtsi" // This include **has** to be made **after** the layers' define, else it won't compile.
 
 &kscan0 { debounce-period = <17>; };
 

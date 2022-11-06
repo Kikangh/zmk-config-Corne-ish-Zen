@@ -15,8 +15,20 @@
  */
 
 /* Ce tableau de convertion a été fait pour mon usage afin de simplifier le travail avec ma keymap sous ZMK.
-*  Il est basé sur la verion 1.5 d'Optimot par Pyjam.
-*/
+ * Il est basé sur la verion 1.5 d'Optimot par Pyjam.
+ *
+ * Si vous utilez des labels pour vos layers, il est nécessaire de positionner l'include des combos après les define les labels des layes, sans quoi le code ne pourra pas se compiler. Exemple ci-dessous :
+ *
+ * #define OPTIM   0
+ * #define LOWER   1
+ * #define RAISE   2
+ * #define ARROW   3
+ * #define NUMBERS 4
+ * #define SCREEN  5
+ *
+ * #include "combos.dtsi" // This include **has** to be made **after** the layers' define, else it won't compile.
+ *
+ */
 
 /*
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
