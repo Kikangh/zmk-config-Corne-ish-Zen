@@ -23,7 +23,7 @@
 // Spacing combos
 COMBO(ret,        &kp RET,              18 30, OPTIM NUMBERS, 50, 100)
 COMBO(ret2,       &kp RET,              16 28, OPTIM NUMBERS, 50, 100)
-COMBO(bspc,       &kp LA(BSPC),          7 19, OPTIM NUMBERS, 50, 100)
+COMBO(bspcword,   &kp LA(BSPC),          7 19, OPTIM NUMBERS, 50, 100)
 COMBO(del,        &kp DEL,               6 18, OPTIM NUMBERS, 50, 100)
 COMBO(tab,        &kp TAB,              16 17, OPTIM NUMBERS, 50, 100)
 COMBO(stab,       &kp LS(TAB),          18 19, OPTIM NUMBERS, 50, 100)
@@ -58,8 +58,8 @@ COMBO(space-r,    &kp LC(RIGHT),        31 32,         OPTIM, 50, 100)
 
 // Application specifics shorcuts
     //OmniPlan
-COMBO(omnipl-identr, &kp LG(LS(N0)),    16 17,         ARROW, 50, 100) //Also works for workflowy WkfyNext
-COMBO(omnipl-identl, &kp LG(LS(N9)),    18 19,         ARROW, 50, 100) //Also works for workflowy WkfyPrev
+COMBO(omnipl-identr, &kp LG(LS(N0)),    16 17,         ARROW, 50, 100) // Also works for workflowy WkfyNext
+COMBO(omnipl-identl, &kp LG(LS(N9)),    18 19,         ARROW, 50, 100) // Also works for workflowy WkfyPrev
 
 // Escape combos
 COMBO(esc,           &kp ESC,        26 27 28,   0 1 2 3 4 5, 50, 100)
