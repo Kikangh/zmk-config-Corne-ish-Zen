@@ -20,6 +20,13 @@
 
 #include "combos.dtsi" // This include **has** to be made **after** the layers' define, else it won't compile.
 
+/ {
+  chosen {
+    zmk,matrix_transform = &default_transform;
+    //zmk,matrix_transform = &five_column_transform;
+  };
+};
+
 &kscan0 { debounce-period = <17>; };
 
 // Mouse specific config
