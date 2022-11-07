@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: kikangh
-      revision: zenV2-HM_tweaks-Mouse-Display-tweaks
+      revision: zenV2-HM_tweaks-Mouse-Display-tweaks-norefactor
       import: app/west.yml
   self:
     path: config
