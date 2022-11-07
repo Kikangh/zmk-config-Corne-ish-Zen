@@ -202,7 +202,7 @@
 &to 0  &none     &none        &none         &kp  LG(LS(COMMA))  &kp BSPC                       &kp MINUS            &kp LG(LS(N8)) &kp LC(LS(TAB))  &kp LC(TAB)      &none             &kp BSPC
 &trans &trans    &kp LCTRL    &kp LALT      &kp  LGUI           &kp LS(LA(LG(SPACE)))          &kp EQUAL            &kp LEFT       &kp UP           &kp DOWN         &kp RIGHT         &none
 &reset &none     &none        &kp LG(MINUS) &kp  LG(EQUAL)      &kp LG(KP_N0)                  &kp NON_US_BACKSLASH &kp GRAVE      &kp RG(RS(UP))   &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
-                              &kp LG(LA(H)) &hsl LSHFT LA(OP_D) &mt LGUI RET                   &hmr RSHFT SPACE     &kp LA(OP_L)   &kp LA(LS(OP_COMM))
+                              &kp LG(LA(H)) &hsl LSHFT LA(OP_D) &trans                         &hmr RSHFT SPACE     &kp LA(OP_L)   &kp LA(LS(OP_COMM))
             >;
         };
 
