@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: kikangh
-      revision: Corneish_zen_v2-Mouse_HM-Tweaks
+      revision: zenV2-HM_tweaks-Mouse-Display-tweaks
       import: app/west.yml
   self:
     path: config
