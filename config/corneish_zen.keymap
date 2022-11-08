@@ -11,6 +11,13 @@
 #include <dt-bindings/zmk/mouse.h>
 #include "keymap_optimot.h"
 
+/ {
+  chosen {
+    zmk,matrix_transform = &default_transform;
+    //zmk,matrix_transform = &five_column_transform;
+  };
+};
+
 #define OPTIM   0
 #define LOWER   1
 #define RAISE   2
@@ -19,13 +26,6 @@
 #define SCREEN  5
 
 #include "combos.dtsi" // This include **has** to be made **after** the layers' define, else it won't compile.
-
-/ {
-  chosen {
-    zmk,matrix_transform = &default_transform;
-    //zmk,matrix_transform = &five_column_transform;
-  };
-};
 
 &kscan0 { debounce-period = <17>; };
 
