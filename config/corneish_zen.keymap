@@ -56,6 +56,17 @@
               ╰────────────╯ ╰────────────╯            */
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_swapper {
+            timeout-ms = <50>;
+            key-positions = <37 38>;
+            bindings = <&swapper>;
+        };
+    };
+};
+
+/ {
     behaviors {
         hml: homerow_mods_l {
             compatible = "zmk,behavior-hold-tap";
@@ -134,16 +145,6 @@
         };
     };
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_swapper {
-            timeout-ms = <50>;
-            key-positions = <37 38>;
-            bindings = <&swapper>;
-        };
-    };
-};
 
 /*                KEY POSITIONS
 
