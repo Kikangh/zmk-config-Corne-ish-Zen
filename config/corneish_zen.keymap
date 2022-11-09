@@ -60,8 +60,9 @@
         compatible = "zmk,combos";
         combo_swapper {
             timeout-ms = <50>;
-            key-positions = <37 38>;
+            key-positions = <28 29>;
             bindings = <&swapper>;
+            ignored-key-positions = <18 19>;
         };
     };
 };
