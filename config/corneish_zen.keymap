@@ -62,7 +62,6 @@
             timeout-ms = <50>;
             key-positions = <28 29>;
             bindings = <&swapper>;
-            ignored-key-positions = <18 19>;
         };
     };
 };
@@ -142,7 +141,7 @@
             label = "SWAPPER";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-            //ignored-key-positions = <21>;
+            ignored-key-positions = <18 19>;
         };
     };
 
