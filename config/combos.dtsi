@@ -29,10 +29,10 @@ COMBO(tab,        &kp TAB,              16 17, OPTIM NUMBERS, 50, 100)
 COMBO(stab,       &kp LS(TAB),          18 19, OPTIM NUMBERS, 50, 100)
 
 // Shift Combo
-COMBO(shift,      &kp RSHFT,            20 32,   LOWER OPTIM, 50, 100)
+COMBO(shift,      &sk RSHFT,            19 31,   LOWER OPTIM, 50, 100)
 
 // Letters combos
-COMBO(op-x,       &kp LBKT,             19 31,         OPTIM, 50, 100)
+COMBO(op-x,       &kp LBKT,             20 32,         OPTIM, 50, 100)
 COMBO(op-cced,    &kp RBKT,             30 31,         OPTIM, 50, 100)
 COMBO(op-z,       &kp BSLH,              8 20,         OPTIM, 50, 100)
 
