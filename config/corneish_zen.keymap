@@ -84,10 +84,11 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_SFT_L";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
+            global-quick-tap-ms = <100>; // Added this to see if it is better.
             hold-trigger-key-positions = <KEYS_R KEYS_L THUMBS_L>;
             hold-trigger-on-release;
         };
