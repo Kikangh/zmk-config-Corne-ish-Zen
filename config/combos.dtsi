@@ -29,17 +29,16 @@ COMBO(tab,        &kp TAB,              16 17, OPTIM NUMBERS, 50, 100)
 COMBO(stab,       &kp LS(TAB),          18 19, OPTIM NUMBERS, 50, 100)
 
 // Shift Combo
-COMBO(shift,      &kp RSHFT,            20 32,         OPTIM, 50, 100)
 
 // Letters combos
-COMBO(op-z,       &kp BSLH,              8 20,         OPTIM, 50, 100)
 
 // Characters combo
-COMBO(minus,      &kp OP_MIN,            3  4,         OPTIM, 50, 100)
-COMBO(underscore, &kp OP_UNDS,           7  8,         OPTIM, 50, 100)
-COMBO(op-lprn,    &kp OP_LPRN,          30 31,         OPTIM, 50, 100)
-COMBO(op-rprn,    &kp OP_RPRN,          30 31,         ARROW, 50, 100)
-COMBO(circ,       &kp OP_CIR,           19 31,         OPTIM, 50, 100)
+COMBO(op-hash,    &kp OP_HASH,           8 20,         OPTIM, 50, 100)
+COMBO(op_at,      &kp OP_AT,            20 32,         OPTIM, 50, 100)
+COMBO(underscore, &kp OP_UNDS,          30 31,         OPTIM, 50, 100)
+COMBO(op-lprn,    &kp OP_LPRN,          19 31,         OPTIM, 50, 100)
+COMBO(op-rprn,    &kp OP_RPRN,          19 31,         ARROW, 50, 100)
+
 
 // Layers combos
 COMBO(lay-arrow,  &tog ARROW,         2  3  4,   OPTIM ARROW, 50, 100)
@@ -64,6 +63,6 @@ COMBO(omnipl-identl, &kp LG(LS(N9)),    18 19,         ARROW, 50, 100) // Also w
 
 // Escape combos
 COMBO(esc,           &kp ESC,        26 27 28,   0 1 2 3 4 5, 50, 100)
-
+COMBO(esc,           &kp ESC,            3  4,   0 1 2 3 4 5, 50, 100)
     };
 };
