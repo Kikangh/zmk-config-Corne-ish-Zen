@@ -55,6 +55,7 @@ COMBO(op-redo,    &kp LG(LS(BSLH)),     15 27,         OPTIM, 50, 100)
 COMBO(cmd-tab,    &kp LG(TAB),          28 29,         OPTIM, 50, 100) // try to replace by swapper in keymap, but not yet functionning.
 COMBO(space-l,    &kp LC(LEFT),         27 28,         OPTIM, 50, 100)
 COMBO(space-r,    &kp LC(RIGHT),        31 32,         OPTIM, 50, 100)
+COMBO(app-list,   &kp RC(SPACE),         7  8,         OPTIM, 50, 100) //Contexts open applications list 
 
 // Application specifics shorcuts
     //OmniPlan
@@ -63,6 +64,6 @@ COMBO(omnipl-identl, &kp LG(LS(N9)),    18 19,         ARROW, 50, 100) // Also w
 
 // Escape combos
 COMBO(esc,           &kp ESC,        26 27 28,   0 1 2 3 4 5, 50, 100)
-COMBO(esc,           &kp ESC,            3  4,   0 1 2 3 4 5, 50, 100)
+COMBO(esc2,          &kp ESC,            3  4,   0 1 2 3 4 5, 50, 100)
     };
 };
