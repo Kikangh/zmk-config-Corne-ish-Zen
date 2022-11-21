@@ -33,8 +33,8 @@ COMBO(stab,       &kp LS(TAB),          18 19, OPTIM NUMBERS, 50, 100)
 // Letters combos
 
 // Characters combo
-COMBO(op-hash,    &kp OP_HASH,           8 20,         OPTIM, 50, 100)
-COMBO(op_at,      &kp OP_AT,            20 32,         OPTIM, 50, 100)
+COMBO(op-at,      &kp OP_AT,             8 20,         OPTIM, 50, 100)
+COMBO(op_hash,    &kp OP_HASH,          20 32,         OPTIM, 50, 100)
 COMBO(underscore, &kp OP_UNDS,          30 31,         OPTIM, 50, 100)
 COMBO(op-lprn,    &kp OP_LPRN,          19 31,         OPTIM, 50, 100)
 COMBO(op-rprn,    &kp OP_RPRN,          19 31,         ARROW, 50, 100)
