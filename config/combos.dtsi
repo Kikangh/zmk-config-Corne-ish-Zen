@@ -23,8 +23,8 @@
 // Spacing combos
 COMBO(ret,        &kp RET,              18 30, OPTIM ARROW NUMBERS, 50, 100)
 COMBO(ret2,       &kp RET,              16 28, OPTIM ARROW NUMBERS, 50, 100)
-COMBO(bspcword,   &kp LA(BSPC),          6 18, OPTIM NUMBERS, 50, 100)
-COMBO(del,        &kp DEL,               7 19, OPTIM NUMBERS, 50, 100)
+COMBO(bspcword,   &kp LA(BSPC),          7 19, OPTIM NUMBERS, 50, 100)
+COMBO(del,        &kp DEL,               6 18, OPTIM NUMBERS, 50, 100)
 COMBO(tab,        &kp TAB,              16 17, OPTIM NUMBERS, 50, 100)
 COMBO(stab,       &kp LS(TAB),          18 19, OPTIM NUMBERS, 50, 100)
 
@@ -33,12 +33,8 @@ COMBO(stab,       &kp LS(TAB),          18 19, OPTIM NUMBERS, 50, 100)
 // Letters combos
 
 // Characters combo
-COMBO(op-at,      &kp OP_AT,             8 20,         OPTIM, 50, 100)
-COMBO(op_hash,    &kp OP_HASH,          20 32,         OPTIM, 50, 100)
 COMBO(underscore, &kp OP_UNDS,          30 31,         OPTIM, 50, 100)
-COMBO(op-lprn,    &kp OP_LPRN,          19 31,         OPTIM, 50, 100)
-COMBO(op-rprn,    &kp OP_RPRN,          19 31,         ARROW, 50, 100)
-
+COMBO(op-circ,    &kp OP_CIRC,          19 31,         OPTIM, 50, 100)
 
 // Layers combos
 COMBO(lay-arrow,  &tog ARROW,         2  3  4,   OPTIM ARROW, 50, 100)
@@ -53,14 +49,16 @@ COMBO(op-redo,    &kp LG(LS(BSLH)),     15 27,         OPTIM, 50, 100)
 
 // Windows Management combos
 COMBO(cmd-tab,    &kp LG(TAB),          28 29,         OPTIM, 50, 100) // try to replace by swapper in keymap, but not yet functionning.
-COMBO(space-l,    &kp LC(LEFT),         27 28,         OPTIM, 50, 100)
-COMBO(space-r,    &kp LC(RIGHT),        31 32,         OPTIM, 50, 100)
-COMBO(app-list,   &kp RC(SPACE),         7  8,         OPTIM, 50, 100) //Contexts open applications list 
+COMBO(space-l,    &kp LC(LEFT),         26 27,         OPTIM, 50, 100)
+COMBO(space-r,    &kp LC(RIGHT),        32 33,         OPTIM, 50, 100)
+COMBO(app-list,   &kp RC(SPACE),         8 20,         OPTIM, 50, 100) //Contexts open applications list 
 
 // Application specifics shorcuts
     //OmniPlan
-COMBO(omnipl-identr, &kp LG(LS(N0)),    16 17,         ARROW, 50, 100) // Also works for workflowy WkfyNext
-COMBO(omnipl-identl, &kp LG(LS(N9)),    18 19,         ARROW, 50, 100) // Also works for workflowy WkfyPrev
+COMBO(omnipl-identr, &kp LG(LS(N0)),    20 32,         RAISE, 50, 100) // Also works for workflowy WkfyNext
+COMBO(omnipl-identl, &kp LG(LS(N9)),    19 31,         RAISE, 50, 100) // Also works for workflowy WkfyPrev
+COMBO(omnipl-identr2, &kp LG(LS(N0)),   15 27,         ARROW, 50, 100) // Also works for workflowy WkfyNext
+COMBO(omnipl-identl2, &kp LG(LS(N9)),   16 28,         ARROW, 50, 100) // Also works for workflowy WkfyPrev
 
 // Escape combos
 COMBO(esc,           &kp ESC,        26 27 28,   0 1 2 3 4 5, 50, 100)
