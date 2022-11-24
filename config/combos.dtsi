@@ -34,7 +34,7 @@ COMBO(stab,       &kp LS(TAB),          18 19, OPTIM NUMBERS, 50, 100)
 
 // Characters combo
 COMBO(underscore, &kp OP_UNDS,          30 31,         OPTIM, 50, 100)
-COMBO(op-circ,    &kp OP_CIRC,          19 31,         OPTIM, 50, 100)
+COMBO(op-circ,    &kp OP_CIR,           19 31,         OPTIM, 50, 100)
 
 // Layers combos
 COMBO(lay-arrow,  &tog ARROW,         2  3  4,   OPTIM ARROW, 50, 100)
