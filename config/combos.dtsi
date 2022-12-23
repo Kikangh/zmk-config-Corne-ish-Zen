@@ -62,6 +62,6 @@ COMBO(app-list,   &kp RC(SPACE),         8 20,         OPTIM, 50, 100) //Context
 
 // Escape combos
 COMBO(esc,           &kp ESC,        26 27 28,   0 1 2 3 4 5, 50, 100)
-COMBO(esc2,          &kp ESC,            2  3,   0 1 2 3 4 5, 50, 100)
+COMBO(esc2,          &kp ESC,            2  3,   0 1 2 3 4 5, 50, 1000) //trying a hight settings to see the change.
     };
 };
