@@ -233,10 +233,10 @@
 // | F10   | ??ê?? |  ;  |  :   |  .   |   &     |                   |  ,   |   No  |   No  |   H   |   No  |   #/% |
 //                     | LCTRL| LALT |CMD/space|                   | togg | RCTRL | RALT  |
             bindings = <            
-&kp ESC         &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                    &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
-&hsl LSHFT CAPS &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5                 &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp MINUS
-&trans          &kp GRAVE &kp LS(G) &kp LS(V) &trans    &kp LA(J)                 &kp G     &none     &none     &trans    &none     &kp EQUAL
-                                    &kp LCTRL &kp LALT  &mt LGUI SPACE            &trans    &kp RCTRL &kp RALT
+&kp ESC   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                            &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
+&kp LSHFT &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5                         &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp MINUS
+&kp CAPS  &kp GRAVE &kp LS(G) &kp LS(V) &trans    &kp LA(J)                         &kp G     &none     &none     &trans    &none     &kp EQUAL
+                                    &kp LCTRL &kp LALT  &mt LGUI SPACE           &trans    &kp RCTRL &kp RALT
             >;
         };
 
