@@ -59,6 +59,7 @@ COMBO(app-list,   &kp RC(SPACE),         8 20,         OPTIM, 50, 100) //Context
 //COMBO(omnipl-identl, &kp LG(LS(N9)),    19 31,         RAISE, 50, 100) // Also works for workflowy WkfyPrev
 COMBO(omnipl-identr2, &kp LG(LS(N0)),   16 17,         ARROW, 50, 100) // Also works for workflowy WkfyNext
 COMBO(omnipl-identl2, &kp LG(LS(N9)),   18 19,         ARROW, 50, 100) // Also works for workflowy WkfyPrev
+COMBO(omnipl-identl3, &kp LG(LS(N9)),   28 29,         ARROW, 50, 100) // Also works for workflowy WkfyPrev
 
 // Escape combos
 COMBO(esc,           &kp ESC,        26 27 28,   0 1 2 3 4 5, 50, 100)

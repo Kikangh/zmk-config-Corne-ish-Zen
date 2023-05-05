@@ -84,11 +84,11 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_SFT_L";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
-            global-quick-tap-ms = <100>; // Added this to see if it is better.
+           // global-quick-tap-ms = <100>; // Added this to see if it is better.
             hold-trigger-key-positions = <KEYS_R KEYS_L THUMBS_L>;
             hold-trigger-on-release;
         };
@@ -98,9 +98,9 @@
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <150>; // trying to see what gives with 0 instead of 150 => not kept.
-            flavor = "balanced"; // reverted to balanced, tap preferred didn't seem good.
+           // flavor = "balanced"; // reverted to balanced, tap preferred didn't seem good.
             bindings = <&mo>, <&kp>;
-            global-quick-tap-ms = <100>; // Added this to see if it is better.
+           //global-quick-tap-ms = <100>; // Added this to see if it is better.
             hold-trigger-key-positions = <KEYS_R THUMBS_L THUMBS_R>;
             hold-trigger-on-release;
         };
@@ -170,7 +170,7 @@
             bindings = <
 &kp TAB        &kp Q        &kp W        &kp E               &kp R           &kp T                          &kp Y             &kp U           &kp I                &kp O        &kp P    &kp BSPC
 &kp LSHFT      &hll ARROW A &hml LCTRL S &hml LALT D         &hml LGUI F     &kp G                          &kp H             &hmr RGUI J     &hmr RALT K          &hmr RCTRL L &kp SEMI &kp SQT
-&kp F10        &kp Z        &kp X        &kp C               &kp V           &hll SCREEN B                  &kp N             &hsr RSHFT OP_C &kp COMMA            &kp DOT      &kp FSLH &kp RBKT
+&kp F10        &kp Z        &kp X        &kp C               &kp V           &hll SCREEN OP_W               &kp N             &hsr RSHFT OP_C &kp COMMA            &kp DOT      &kp FSLH &kp RBKT
                                          &lt LOWER LG(LA(H)) &hsl LSHFT OP_X &mt LGUI SPACE                 &lt NUMBERS SPACE &lt RAISE OP_Z  &hsr RSHFT RC(SPACE)
 
             //code pour utiler Caps_Word : &cwl RAISE 0 (pas adapté à Optimot au 04/07/2022; les keycodes Qwerty sont pris en compte, et même si on peut
