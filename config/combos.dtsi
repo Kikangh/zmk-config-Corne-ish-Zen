@@ -33,6 +33,9 @@ COMBO(stab,       &kp LS(TAB),          18 19, OPTIM NUMBERS, 50, 100)
 // Letters combos
 COMBO(op_cced,    &kp OP_CCED,          20 32,         OPTIM, 50, 100)
 
+// Letters combos
+COMBO(op_cced,    &kp OP_CCED,          20 32,         OPTIM, 50, 100)
+
 // Characters combo
 COMBO(op_circ,    &kp OP_CIR,            8 20,         OPTIM, 50, 100)
 COMBO(op_hash,    &kp OP_HASH,          19 31,         OPTIM, 50, 100)
@@ -51,9 +54,9 @@ COMBO(op-undo,    &kp LG(BSLH),         17 29,         OPTIM, 50, 100)
 COMBO(op-redo,    &kp LG(LS(BSLH)),     15 27,         OPTIM, 50, 100)
 
 // Windows Management combos
-COMBO(cmd-tab,    &kp LG(TAB),          28 29,         OPTIM, 50, 100) // try to replace by swapper in keymap, but not yet functionning.
-COMBO(space-l,    &kp LC(LEFT),         36 37,         OPTIM, 50, 100)
-COMBO(space-r,    &kp LC(RIGHT),        40 41,         OPTIM, 50, 100)
+COMBO(applist,    &kp RC(SPACE),        28 29,         OPTIM, 50, 100)
+//COMBO(space-l,    &kp LC(LEFT),         36 37,         OPTIM, 50, 100)
+//COMBO(space-r,    &kp LC(RIGHT),        40 41,         OPTIM, 50, 100)
 
 // Application specifics shorcuts
     //OmniPlan
