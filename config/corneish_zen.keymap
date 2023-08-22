@@ -202,8 +202,8 @@
 // |AppsForceQuit        | FileMailOutlook     |WkfyNormSize|  WkfySmall   | WkfyBigger |Emojis|                |      |      |       |      |       |       |
 //                                                          |              |            |      |                |      |      |       |
             bindings = <    
-&kp ESC               &kp LA(LC(LG(LS(R)))) &kp HOME              &mmv MOVE_VERT(-5000) &kp END               &kp LA(LC(LS(SPACE)))               &kp C_MUTE &kp C_VOL_DN        &kp C_VOL_UP          &kp LG(COMMA)         &none                &trans
-&kp LA(LC(LG(LS(R)))) &kp RA(RG(G))         &mmv MOVE_HOR(-5000)  &mmv MOVE_VERT(5000)  &mmv MOVE_HOR(5000)   &kp LC(LS(SPACE))                   &kp PG_UP  &mkp LCLK           &mkp RCLK             &kp LG(LS(COMMA))     &none                &kp LA(LG(SEMI))
+&kp ESC               &kp LA(LC(LG(LS(R)))) &kp LG(LEFT)          &mmv MOVE_VERT(-5000) &kp LG(RIGHT)         &kp LA(LC(LS(SPACE)))               &kp C_MUTE &kp C_VOL_DN        &kp C_VOL_UP          &kp LG(COMMA)         &none                &trans
+&kp HOME              &kp RA(RG(G))         &mmv MOVE_HOR(-5000)  &mmv MOVE_VERT(5000)  &mmv MOVE_HOR(5000)   &kp END                             &kp PG_UP  &mkp LCLK           &mkp RCLK             &kp LG(LS(COMMA))     &none                &kp LA(LG(SEMI))
 &kp LA(LG(ESC))       &kp LC(D)             &kp LG(MINUS)         &kp  LG(EQUAL)        &kp LG(KP_N0)         &kp LC(LG(SPACE))                   &kp PG_DN  &mwh SCROLL_HOR(15) &mwh SCROLL_VERT(15)  &mwh SCROLL_VERT(-15) &mwh SCROLL_HOR(-15) &none
                                                                   &trans                &trans                &trans                              &trans     &trans              &trans  
             >;
