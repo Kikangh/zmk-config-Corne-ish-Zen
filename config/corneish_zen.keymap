@@ -71,12 +71,15 @@
         q_maj: q_maj {
             label = "ZM_q_maj";
             compatible = "zmk,behavior-macro";
+            wait-ms = <20>;
+            tap-ms = <20>;
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp CAPS>
                 , <&macro_press &kp LSHFT>
                 , <&macro_tap &kp OP_Q>
                 , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp CAPS>
                 ;
         };
     };
