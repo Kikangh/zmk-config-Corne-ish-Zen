@@ -144,7 +144,21 @@
             ignored-key-positions = <18 19>;
         }; */
     }; 
-
+/ {
+    macros {
+        q_maj: q_maj {
+            label = "ZM_q_maj";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp CAPS>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp OP_Q>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
+};
 
 /*                KEY POSITIONS
 
@@ -217,7 +231,7 @@
 // | RESET  |     | HookCpyLk  | HookCpyMDLk  | HookToLink |   Hook   |                   |  ??ê?? |  $/€   |WkfyMvUP|WkfyMvDwn|TxTXSearch|TxTXDisable|
 //                          |              |   LSHFT     |  CMD/return   |                   |  SPC | }|WkfyNext|
             bindings = <
-&to 0  &none     &none                 &none                 &kp  LG(LS(COMMA))    &kp BSPC                      &kp MINUS            &kp LG(LS(N8)) &kp LC(LS(TAB))     &kp LC(TAB)      &none             &kp BSPC
+&to 0  &none     &none                 &none                 &kp  LG(LS(COMMA))    &kp BSPC                      &kp MINUS            &kp LG(LS(N8)) &kp LC(LS(TAB))     &kp LC(TAB)      &q_maj             &kp BSPC
 &trans &trans    &kp LCTRL             &kp LALT              &kp  LGUI             &kp LS(LA(LG(OP_P)))          &kp EQUAL            &kp LEFT       &kp UP              &kp DOWN         &kp RIGHT         &none
 &reset &none     &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LG(LS(SPACE))             &kp NON_US_BACKSLASH &kp GRAVE      &kp RG(RS(UP))      &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
                                        &kp LC(LEFT)          &hsl LSHFT HOME       &trans                        &hmr RSHFT SPACE     &kp END        &kp LC(RIGHT)
