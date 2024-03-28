@@ -18,6 +18,15 @@
   };
 };
 
+//APPLICATIONS SHORCUTS
+    //Omniplan
+    #define OMNIPLIDENTR LG(LS(N0))
+    #define OMNIPLIDENTL LG(LS(N9))
+    //1Password
+    #define ONEPWDQUICK LS(LA(LG(OP_P)))
+    //Raycast
+    #define CLIPB_HIST LG(LA(OP_P))
+
 #define OPTIM   0
 #define LOWER   1
 #define RAISE   2
@@ -27,13 +36,20 @@
 
 #include "combos.dtsi" // This include **has** to be made **after** the layers' define, else it won't compile.
 
-//Applications shorcuts
-//Omniplan
-#define OMNIPLIDENTR LG(LS(N0))
-#define OMNIPLIDENTL LG(LS(N9))
+
+/*                KEY POSITIONS
+
+  ╭────────────────────────╮ ╭────────────────────────╮
+  │  0   1   2   3   4   5 │ │  6   7   8   9  10  11 │
+  │ 12  13  14  15  16  17 │ │ 18  19  20  21  22  23 │
+  │ 24  25  26  27  28  29 │ │ 30  31  32  33  34  35 │
+  ╰──────────╮  36  37  38 │ │ 39  40  41 ╭───────────╯
+             ╰─────────────╯ ╰────────────╯            */
 
 
-&kscan0 { debounce-period = <17>; };
+&kscan0 { debounce-press-ms = <17>;
+          debounce-release-ms = <17>;
+        };
 
 // Mouse specific config
 &mmv {    
@@ -79,9 +95,10 @@
 // Key position groups
 #define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35   
+#define KEYS_L_SPECIAL 0
 #define THUMBS_L 36 37 38
+#define THUMB_L_SPECIAL 37
 #define THUMBS_R 39 40 41
-
 
 /*                KEY POSITIONS
 
@@ -91,17 +108,6 @@
   │ 24  25  26  27  28  29 │ │ 30  31  32  33  34  35 │
   ╰───────────╮ 36  37  38 │ │ 39  40  41 ╭───────────╯
               ╰────────────╯ ╰────────────╯            */
-
-/* / {
-    combos {
-        compatible = "zmk,combos";
-        combo_swapper {
-            timeout-ms = <50>;
-            key-positions = <28 29>;
-            bindings = <&swapper>;
-        };
-    };
-}; */
 
 / {
     behaviors {
@@ -113,8 +119,22 @@
             quick-tap-ms = <150>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
-            global-quick-tap-ms = <100>;
-            hold-trigger-key-positions = <KEYS_R THUMBS_R>;
+            //global-quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+            hold-trigger-key-positions = <KEYS_R KEYS_L_SPECIAL THUMBS_R THUMB_L_SPECIAL>;
+            hold-trigger-on-release;
+        };
+        hmr: homerow_mods_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALPHA_MT_R";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <150>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            //global-quick-tap-ms = <150>;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <KEYS_L THUMBS_L>;
             hold-trigger-on-release;
         };
         hsl: homerow_shift_l {
@@ -128,30 +148,6 @@
             hold-trigger-key-positions = <KEYS_R KEYS_L THUMBS_L>;
             //hold-trigger-on-release;
         };
-        hll: homerow_layer_l {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYER_L";
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <150>; // trying to see what gives with 0 instead of 150 => not kept.
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-           //global-quick-tap-ms = <100>; // Added this to see if it is better.
-            hold-trigger-key-positions = <KEYS_R THUMBS_L THUMBS_R>;
-            hold-trigger-on-release;
-        };
-        hmr: homerow_mods_r {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ALPHA_MT_R";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <150>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-            global-quick-tap-ms = <100>;
-            hold-trigger-key-positions = <KEYS_L THUMBS_L>;
-            hold-trigger-on-release;
-        };
         hsr: homerow_shift_r {
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_SFT_R";
@@ -163,6 +159,30 @@
             hold-trigger-key-positions = <KEYS_L THUMBS_L>;
             hold-trigger-on-release;
         };
+        /*hll: homerow_layer_l {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_LAYER_L";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <150>; // trying to see what gives with 0 instead of 150 => not kept.
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+           //global-quick-tap-ms = <100>; // Added this to see if it is better.
+            hold-trigger-key-positions = <KEYS_R THUMBS_L THUMBS_R>;
+            hold-trigger-on-release;
+        };*/
+        hll: homerow_layer_l {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_LAYER_L";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>; // switched from 300 to 200, getting too much "af" instead of "@" (layer not triggered)
+            quick-tap-ms = <150>; //trying to see what gives with 0 instead of 150 => not kept.
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <KEYS_R THUMBS_L THUMBS_R>;
+            hold-trigger-on-release;
+        };
         cwl: caps_word_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "CAPS WORD LAYER";
@@ -172,14 +192,13 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&caps_word>;
         };
-         // Swapper for smart cmd+tab
-/*        swapper: swapper {
-            compatible = "zmk,behavior-tri-state";
-            label = "SWAPPER";
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-            ignored-key-positions = <18 19>;
-        }; */
+            tapping-term-ms = <150>;
+            bindings = <&kp OP_X>, <&kp OP_CCED>, <&kp LC(LG(OP_Q))>;
+        };
     }; 
 
 
@@ -204,10 +223,10 @@
 //                     | LOWER/ | TAB / | CMD/ENTER |                   | NUMBER/ | RAISE/ | RC+SPC|
 //                     | CLPBD H| LSHFT |                             | SPACE   |  W     | 
             bindings = <
-&kp TAB   &kp OP_AGRV  &kp OP_J        &kp OP_O            &kp OP_EACU        &kp OP_B                 &kp OP_F          &kp OP_D         &kp OP_L             &kp OP_QUOT     &kp OP_Q &kp BSPC
-&kp LSHFT &hll ARROW A &hml LCTRL OP_I &hml LALT OP_E      &hml LGUI OP_U     &kp OP_COMM              &kp OP_P          &hmr RGUI OP_T   &hmr RALT OP_S       &hmr RCTRL OP_R &kp OP_N &kp OP_CIR
-&kp F10   &kp OP_K     &kp OP_Y        &kp OP_EGRV         &kp OP_DOT         &hll SCREEN OP_W         &kp OP_G          &hsr RSHFT OP_C  &kp OP_M             &kp OP_H        &kp OP_V &kp RBKT
-                                       &lt LOWER LG(LA(H)) &hsl LSHFT TAB     &mt LGUI SPACE           &lt NUMBERS SPACE &lt RAISE OP_Z   &kp OP_X
+&kp TAB   &kp OP_AGRV  &kp OP_J        &kp OP_O             &kp OP_EACU        &kp OP_B                 &kp OP_F          &kp OP_D         &kp OP_L             &kp OP_QUOT     &kp OP_Q &kp BSPC
+&kp LSHFT &hll ARROW A &hml LCTRL OP_I &hml LALT OP_E       &hml LGUI OP_U     &kp OP_COMM              &kp OP_P          &hmr RGUI OP_T   &hmr RALT OP_S       &hmr RCTRL OP_R &kp OP_N &kp OP_CIR
+&kp F10   &kp OP_K     &kp OP_Y        &kp OP_EGRV          &kp OP_DOT         &hll SCREEN OP_W         &kp OP_G          &hsr RSHFT OP_C  &kp OP_M             &kp OP_H        &kp OP_V &kp OP_CCED
+                                       &lt LOWER CLIPB_HIST &hsl LSHFT TAB     &mt LGUI SPACE           &lt NUMBERS SPACE &lt RAISE OP_Z   &td0
 
             //code pour utiler Caps_Word : &cwl RAISE 0 (pas adapté à Optimot au 04/07/2022; les keycodes Qwerty sont pris en compte, et même si on peut
             // faire en sorte que certains keycodes ne désactivent pas Caps, je ne vois pas pour le moment comment faire pour que des keycodes
@@ -254,10 +273,10 @@
 // | RESET  |     | HookCpyLk  | HookCpyMDLk  | HookToLink |   Hook     |                    |  ??ê?? |  $/€             |WkfyMvUP|WkfyMvDwn|TxTXSearch|TxTXDisable|
 //                          |              | LSHFT / Home |  trans       |                   |  SPC | END |WkfyNext|
             bindings = <
-&to 0  &none     &kp OMNIPLIDENTL      &kp OMNIPLIDENTR      &kp  LG(LS(COMMA))    &kp BSPC                      &kp MINUS            &kp LS(LA(LG(N8))) &none          &none            &q_minuscule      &kp BSPC
-&trans &trans    &kp LCTRL             &kp LALT              &kp  LGUI             &kp LS(LA(LG(OP_P)))          &kp EQUAL            &kp LEFT           &kp UP         &kp DOWN         &kp RIGHT         &q_maj
-&reset &none     &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LG(LS(SPACE))             &kp NON_US_BACKSLASH &kp GRAVE          &kp RG(RS(UP)) &kp RG(RS(DOWN)) &kp RG(LS(LA(Y))) &kp RA(RC(RG(J)))
-                                       &kp LC(LEFT)          &hsl LSHFT HOME       &trans                        &hmr RSHFT SPACE     &kp END            &kp LC(RIGHT)
+&to 0  &none     &kp OMNIPLIDENTL      &kp OMNIPLIDENTR      &kp  LG(LS(COMMA))    &kp BSPC                      &kp OP_AT            &kp LS(LA(LG(N8))) &none     &none     &q_minuscule         &kp BSPC
+&trans &trans    &kp LCTRL             &kp LALT              &kp  LGUI             &kp ONEPWDQUICK               &kp OP_HASH          &kp LEFT           &kp UP    &kp DOWN  &kp RIGHT            &q_maj
+&reset &none     &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LG(LS(SPACE))             &kp NON_US_BACKSLASH &kp OP_DLR         &kp PG_UP &kp PG_DN &kp RG(LS(LA(OP_F))) &kp RA(RC(RG(OP_T)))
+                                       &kp LC(LEFT)          &hsl LSHFT HOME       &trans                        &hmr RSHFT SPACE     &kp HOME           &kp END
             >;
         };
 
@@ -269,10 +288,10 @@
 // | F10   | ??ê?? |  ;  |  :   |  .   |   &     |                   |  ,   |   No  |   No  |   H   |   No  |   #/% |
 //                     | LCTRL| LALT |CMD/space|                   | togg | RCTRL | RALT  |
             bindings = <            
-&kp ESC   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                            &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
-&kp LSHFT &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5                         &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp MINUS
-&kp CAPS  &kp GRAVE &kp LS(G) &kp LS(V) &trans    &kp LA(J)                         &kp G     &none     &none     &trans    &none     &kp EQUAL
-                                    &kp LCTRL &kp LALT  &mt LGUI SPACE           &trans    &kp RCTRL &kp RALT
+&kp ESC   &kp N1     &kp N2      &kp N3      &kp N4    &kp N5                   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
+&kp LSHFT &kp KP_N1  &kp KP_N2   &kp KP_N3   &kp KP_N4 &kp KP_N5                &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp MINUS
+&kp CAPS  &kp OP_DLR &kp OP_SCLN &kp OP_COLN &trans    &kp LA(OP_T)             &kp G     &none     &none     &trans    &none     &kp EQUAL
+                                    &kp RALT &kp LSHFT &mt LGUI SPACE           &trans    &kp RALT  &kp RCTRL
             >;
         };
 
