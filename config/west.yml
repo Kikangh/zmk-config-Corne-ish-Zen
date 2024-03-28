@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: kikangh
-      revision: 2024-Mouse-from-Pete-refactor
+      revision: 2024-Mouse-Zen-Display-from-Cem
       import: app/west.yml
   self:
     path: config
