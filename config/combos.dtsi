@@ -7,13 +7,13 @@
   ╰──────────╮  36  37  38 │ │ 39  40  41 ╭───────────╯
              ╰─────────────╯ ╰────────────╯            */
 
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, QUICKTAP) \
+#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS, TERM, IDLEMS) \
         combo_##NAME { \
             timeout-ms = <TERM>; \
             bindings = <BINDINGS>; \
             key-positions = <KEYPOS>; \
             layers = <LAYERS>; \
-            global-quick-tap-ms = <QUICKTAP>; \
+            require-prior-idle-ms = <IDLEMS>; \
         };
 
 / {
@@ -21,9 +21,10 @@
         compatible = "zmk,combos";
 
 // Spacing combos
-COMBO(ret,        &kp RET,              18 30,         OPTIM ARROW NUMBERS, 50, 100)
+COMBO(ret,        &kp RET,              18 30,         OPTIM ARROW NUMBERS, 50, 80)
 COMBO(ret2,       &kp RET,              16 28,         OPTIM ARROW NUMBERS, 50, 100)
-COMBO(bspcword,   &kp LA(BSPC),          7 19,         OPTIM NUMBERS, 50, 100)
+COMBO(bspc,       &kp BSPC,              7 19,         OPTIM ARROW NUMBERS, 50, 100)
+COMBO(bspcword,   &kp LA(BSPC),         30 31,         OPTIM ARROW NUMBERS, 50, 100)
 COMBO(del,        &kp DEL,               6 18,         OPTIM NUMBERS, 50, 100)
 COMBO(cmd-tab,    &kp LG(TAB),          16 17,         OPTIM NUMBERS, 50, 100)
 COMBO(stab,       &kp LS(TAB),          18 19,         OPTIM NUMBERS, 50, 100)
@@ -31,16 +32,14 @@ COMBO(stab,       &kp LS(TAB),          18 19,         OPTIM NUMBERS, 50, 100)
 // Shift Combo
 
 // Letters combos
-COMBO(op_cced,    &kp OP_CCED,          20 32,         OPTIM, 50, 100)
-
-// Letters combos
-COMBO(op_cced,    &kp OP_CCED,          20 32,         OPTIM, 50, 100)
+COMBO(op_cced,    &kp OP_CCED,          20 21,         OPTIM, 50, 100)
 
 // Characters combo
-COMBO(op_circ,    &kp OP_CIR,            8 20,         OPTIM, 50, 100)
-COMBO(op_hash,    &kp OP_HASH,          19 31,         OPTIM, 50, 100)
-COMBO(op_at,      &kp OP_AT,            20 32,         OPTIM, 50, 100)
-COMBO(underscore, &kp OP_UNDS,          30 31,         OPTIM, 50, 100)
+COMBO(op_circ,    &kp OP_CIR,            8 20,         OPTIM NUMBERS, 50, 100)
+COMBO(op_hash,    &kp OP_HASH,          19 31,         OPTIM ARROW NUMBERS, 50, 100)
+COMBO(op_at,      &kp OP_AT,            20 32,         OPTIM ARROW NUMBERS, 50, 100)
+COMBO(underscore, &kp OP_UNDS,          31 32,         OPTIM ARROW NUMBERS, 50, 100)
+COMBO(op_oe,      &kp RA(OP_O),          3  4,         OPTIM, 50, 100)
 
 // Layers combos
 COMBO(lay-arrow,  &tog ARROW,         2  3  4,   OPTIM ARROW, 50, 100)
@@ -54,20 +53,14 @@ COMBO(op-undo,    &kp LG(BSLH),         17 29,         OPTIM, 50, 100)
 COMBO(op-redo,    &kp LG(LS(BSLH)),     15 27,         OPTIM, 50, 100)
 
 // Windows Management combos
-COMBO(applist,    &kp RC(SPACE),        28 29,         OPTIM, 50, 100)
-//COMBO(space-l,    &kp LC(LEFT),         36 37,         OPTIM, 50, 100)
-//COMBO(space-r,    &kp LC(RIGHT),        40 41,         OPTIM, 50, 100)
+COMBO(applist,      &kp RC(SPACE),      28 29,         OPTIM, 50, 100)
 
 // Application specifics shorcuts
     //OmniPlan
-//COMBO(omnipl-identr, &kp LG(LS(N0)),  20 32,         RAISE, 50, 100) // Also works for workflowy WkfyNext
-//COMBO(omnipl-identl, &kp LG(LS(N9)),  19 31,         RAISE, 50, 100) // Also works for workflowy WkfyPrev
-COMBO(omnipl-identr2, &kp LG(LS(N0)),   16 17,         ARROW, 50, 100) // Also works for workflowy WkfyNext
-COMBO(omnipl-identl2, &kp LG(LS(N9)),   18 19,         ARROW, 50, 100) // Also works for workflowy WkfyPrev
-COMBO(omnipl-identl3, &kp LG(LS(N9)),   28 29,         ARROW, 50, 100) // Also works for workflowy WkfyPrev
+COMBO(omnipl-identr2, &kp LG(LS(N0)),    16 17,        ARROW, 50, 100) // Also works for workflowy WkfyNext
+COMBO(omnipl-identl2, &kp LG(LS(N9)),    18 19,        ARROW, 50, 100) // Also works for workflowy WkfyPrev
 
 // Escape combos
 COMBO(esc,           &kp ESC,        26 27 28,   0 1 2 3 4 5, 50, 100)
-COMBO(esc2,          &kp ESC,        0  1,       0 1 2 3 4 5, 50, 100)
     };
 };
