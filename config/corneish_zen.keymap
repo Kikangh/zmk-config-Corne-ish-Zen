@@ -248,10 +248,10 @@
 // |AppsForceQuit        | FileMailOutlook     |WkfyNormSize|  WkfySmall   | WkfyBigger |Emojis|                |      |      |       |      |       |       |
 //                                                          |              |            |      |                |      |      |       |
             bindings = <    
-&kp ESC               &kp LA(LC(LG(LS(R)))) &kp LG(LEFT)          &mmv MOVE_UP    &kp LG(RIGHT)     &kp LA(LC(LS(SPACE)))               &kp C_MUTE &kp C_VOL_DN        &kp C_VOL_UP          &kp LG(OP_M)         &none                &trans
-&kp HOME              &kp RA(RG(G))         &mmv MOVE_LEFT        &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &kp END                             &kp PG_UP  &mkp LCLK           &mkp RCLK             &kp LG(LS(OP_M))     &none                &kp LA(LG(LS(OP_N)))
-&kp LA(LG(ESC))       &kp LC(D)             &kp LG(KP_N0)         &kp  LG(MINUS)  &kp LG(EQUAL)     &kp LC(LG(SPACE))                   &kp PG_DN  &msc SCRL_LEFT      &msc SCRL_UP          &msc SCRL_DOWN        &msc SCRL_RIGHT &none
-                                                                  &trans          &trans            &trans                              &trans     &trans              &trans  
+&kp ESC         &kp LA(LC(LG(LS(R)))) &kp LG(LEFT)   &mmv MOVE_UP    &kp LG(RIGHT)   &kp LA(LC(LS(SPACE)))               &kp C_MUTE &kp C_VOL_DN   &kp C_VOL_UP   &kp LG(OP_M)     &none           &trans
+&kp HOME        &kp RA(RG(G))         &mmv MOVE_LEFT &mmv MOVE_DOWN  &mmv MOVE_RIGHT &kp END                             &kp PG_UP  &mkp LCLK      &mkp RCLK      &kp LG(LS(OP_M)) &none           &kp LA(LG(LS(OP_N)))
+&kp LA(LG(ESC)) &kp LC(D)             &kp LG(KP_N0)  &kp  LG(MINUS)  &kp LG(EQUAL)   &kp LC(LG(SPACE))                   &kp PG_DN  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP     &msc SCRL_RIGHT &none
+                                                     &trans          &trans          &trans                              &trans     &trans         &trans  
             >;
         };
 
