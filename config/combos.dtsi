@@ -32,14 +32,14 @@ COMBO(stab,       &kp LS(TAB),          18 19,         OPTIM NUMBERS, 50, 100)
 // Shift Combo
 
 // Letters combos
-COMBO(op_cced,    &kp OP_CCED,          20 21,         OPTIM, 50, 100)
+//COMBO(op_cced,       &kp OP_CCED,        20 21,         OPTIM, 50, 100)
+COMBO(cced,       &kp OP_CCED,          31 32,         OPTIM ARROW NUMBERS, 50, 100)
+//COMBO(op_oe,      &kp RA(OP_O),          3  4,         OPTIM, 50, 100)
 
 // Characters combo
 COMBO(op_circ,    &kp OP_CIR,            8 20,         OPTIM NUMBERS, 50, 100)
 COMBO(op_hash,    &kp OP_HASH,          19 31,         OPTIM ARROW NUMBERS, 50, 100)
 COMBO(op_at,      &kp OP_AT,            20 32,         OPTIM ARROW NUMBERS, 50, 100)
-COMBO(underscore, &kp OP_UNDS,          31 32,         OPTIM ARROW NUMBERS, 50, 100)
-COMBO(op_oe,      &kp RA(OP_O),          3  4,         OPTIM, 50, 100)
 
 // Layers combos
 COMBO(lay-arrow,  &tog ARROW,         2  3  4,   OPTIM ARROW, 50, 100)
