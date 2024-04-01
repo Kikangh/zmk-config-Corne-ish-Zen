@@ -53,8 +53,8 @@ COMBO(op-cut,     &kp LG(LBKT),          2 14,         OPTIM, 50, 100)
 COMBO(op-copy,    &kp LG(M),             3 15,         OPTIM, 50, 100)
 COMBO(op-paste,   &kp LG(FSLH),          4 16,         OPTIM, 50, 100)
 COMBO(op-pasttxt, &kp LG(LA(LS(FSLH))),  5 17,         OPTIM, 50, 100) //paste without formatting
-COMBO(op-undo,    &kp LG(BSLH),         17 29,         OPTIM, 50, 100)
-COMBO(op-redo,    &kp LG(LS(BSLH)),     15 27,         OPTIM, 50, 100)
+COMBO(op-undo,    &kp LG(OP_Z),         17 29,         OPTIM, 50, 100)
+COMBO(op-redo,    &kp LG(LS(OP_Z)),     15 27,         OPTIM, 50, 100)
 
 // Windows Management combos
 COMBO(applist,      &kp RC(SPACE),      28 29,         OPTIM, 50, 100)
