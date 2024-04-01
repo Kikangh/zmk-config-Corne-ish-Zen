@@ -34,7 +34,7 @@ COMBO(stab,       &kp LS(TAB),          18 19,         OPTIM NUMBERS, 50, 100)
 // Letters combos
 //COMBO(op_cced,       &kp OP_CCED,        20 21,         OPTIM, 50, 100)
 //COMBO(op_oe,      &kp RA(OP_O),          3  4,         OPTIM, 50, 100)
-COMBO(op_cced,    &kp OP_CCED,          32 33,         OPTIM ARROW NUMBERS, 50, 100)
+COMBO(op_cced,    &kp OP_CCED,          32 33,         OPTIM ARROW NUMBERS, 70, 100)
 COMBO(op_q,       &kp OP_Q,              8 20,         OPTIM ARROW, 50, 100)
 
 
