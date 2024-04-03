@@ -24,7 +24,7 @@
 COMBO(ret,        &kp RET,              18 30,         OPTIM ARROW NUMBERS, 50, 80)
 COMBO(ret2,       &kp RET,              16 28,         OPTIM ARROW NUMBERS, 50, 100)
 COMBO(bspc,       &kp BSPC,              7 19,         OPTIM ARROW NUMBERS, 50, 100)
-COMBO(bspcword,   &kp LA(BSPC),         30 31,         OPTIM ARROW NUMBERS, 50, 100)
+//COMBO(bspcword,   &kp LA(BSPC),         30 31,         OPTIM ARROW NUMBERS, 50, 100)
 COMBO(bspcword2,  &kp LA(BSPC),          8 20,         OPTIM ARROW NUMBERS, 50, 100)
 COMBO(del,        &kp DEL,               6 18,         OPTIM NUMBERS, 50, 100)
 COMBO(cmd-tab,    &kp LG(TAB),          16 17,         OPTIM NUMBERS, 50, 100)
@@ -36,11 +36,11 @@ COMBO(stab,       &kp LS(TAB),          18 19,         OPTIM NUMBERS, 50, 100)
 //COMBO(op_cced,       &kp OP_CCED,        20 21,         OPTIM, 50, 100)
 //COMBO(op_oe,      &kp RA(OP_O),          3  4,         OPTIM, 50, 100)
 COMBO(op_cced,    &kp OP_CCED,          32 33,         OPTIM ARROW NUMBERS, 70, 100)
-//COMBO(op_q,       &kp OP_Q,              8 20,         OPTIM ARROW, 50, 100)
+
 
 
 // Characters combo
-COMBO(op_circ,    &kp OP_CIR,           31 32,         OPTIM NUMBERS, 50, 100)
+COMBO(op_circ,    &kp OP_CIR,           30 31,         OPTIM NUMBERS, 50, 100)
 COMBO(op_hash,    &kp OP_HASH,          19 31,         OPTIM ARROW NUMBERS, 50, 100)
 COMBO(op_at,      &kp OP_AT,            20 32,         OPTIM ARROW NUMBERS, 50, 100)
 COMBO(op_min,     &kp OP_MIN,           27 28,         OPTIM ARROW NUMBERS, 50, 100)
