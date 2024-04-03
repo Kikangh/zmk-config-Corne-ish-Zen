@@ -25,6 +25,7 @@ COMBO(ret,        &kp RET,              18 30,         OPTIM ARROW NUMBERS, 50, 
 COMBO(ret2,       &kp RET,              16 28,         OPTIM ARROW NUMBERS, 50, 100)
 COMBO(bspc,       &kp BSPC,              7 19,         OPTIM ARROW NUMBERS, 50, 100)
 COMBO(bspcword,   &kp LA(BSPC),         30 31,         OPTIM ARROW NUMBERS, 50, 100)
+COMBO(bspcword2,  &kp LA(BSPC),          8 20,         OPTIM ARROW NUMBERS, 50, 100)
 COMBO(del,        &kp DEL,               6 18,         OPTIM NUMBERS, 50, 100)
 COMBO(cmd-tab,    &kp LG(TAB),          16 17,         OPTIM NUMBERS, 50, 100)
 COMBO(stab,       &kp LS(TAB),          18 19,         OPTIM NUMBERS, 50, 100)
