@@ -1,4 +1,4 @@
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 2000  // 1500
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000  // 1500 puis 2000
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 20
 
 #include <dt-bindings/zmk/mouse.h>
