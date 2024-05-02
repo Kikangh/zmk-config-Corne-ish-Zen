@@ -215,7 +215,7 @@
             bindings = <
 &kp TAB   &kp OP_AGRV  &kp OP_J        &kp OP_O             &kp OP_EACU        &kp OP_B                 &kp OP_F          &kp OP_D         &kp OP_L             &kp OP_QUOT     &kp OP_Q &kp BSPC
 &kp LSHFT &hll ARROW A &hml LCTRL OP_I &hml LALT OP_E       &hml LGUI OP_U     &kp OP_COMM              &kp OP_P          &hmr RGUI OP_T   &hmr RALT OP_S       &hmr RCTRL OP_R &kp OP_N &kp OP_CIR
-&kp F10   &kp OP_K     &kp OP_Y        &kp OP_EGRV          &kp OP_DOT         &hll SCREEN OP_W         &kp OP_G          &hsr RSHFT OP_C  &kp OP_M             &kp OP_H        &kp OP_V &kp OP_CCED
+&kp F3    &kp OP_K     &kp OP_Y        &kp OP_EGRV          &kp OP_DOT         &hll SCREEN OP_W         &kp OP_G          &hsr RSHFT OP_C  &kp OP_M             &kp OP_H        &kp OP_V &kp OP_CCED
                                        &lt LOWER CLIPB_HIST &hsl LSHFT TAB     &mt LGUI SPACE           &lt NUMBERS SPACE &lt MOUSE OP_Z   &kp OP_X
 
             //code pour utiler Caps_Word : &cwl MOUSE 0 (pas adapté à Optimot au 04/07/2022; les keycodes Qwerty sont pris en compte, et même si on peut
@@ -235,7 +235,7 @@
             bindings = <                       
 &kp ESC &kp F1 &kp F2 &kp F3 &kp F4      &kp F5               &kp LA(LC(LS(OP_F)))     &kp LA(LC(LS(OP_D)))     &kp LA(LC(LS(OP_L)))      &kp LA(LC(LS(OP_QUOT))) &none                 &kp F12
 &kp F6  &kp F7 &kp F8 &kp F9 &kp F10     &kp F11              &kp LA(LC(LS(OP_P)))     &kp LA(LC(LS(LEFT)))     &kp LA(LC(LS(UP)))        &kp LA(LC(LS(DOWN)))    &kp LA(LC(LS(RIGHT))) &kp LS(LA(LC(LG(OP_G))))
-&kp F3  &none  &none  &none  &kp LG(F12) &kp F12              &kp LA(LC(LS(OP_G)))     &kp LC(LG(OP_Q))         &kp LA(LC(LS(OP_M)))      &kp LA(LC(LS(OP_H)))    &none                 &kp LS(LA(LC(LG(OP_D))))
+&kp F10 &none  &none  &none  &kp LG(F12) &kp F12              &kp LA(LC(LS(OP_G)))     &kp LC(LG(OP_Q))         &kp LA(LC(LS(OP_M)))      &kp LA(LC(LS(OP_H)))    &none                 &kp LS(LA(LC(LG(OP_D))))
                       &trans &trans      &trans               &kp LG(LA(LC(LS(LEFT)))) &kp LG(LA(LC(LS(DOWN)))) &kp LG(LA(LC(LS(RIGHT)))) 
             >;
         };
