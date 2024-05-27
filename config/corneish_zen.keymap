@@ -107,7 +107,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <150>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             //global-quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
@@ -120,7 +120,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick-tap-ms = <150>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             //global-quick-tap-ms = <150>;
             require-prior-idle-ms = <125>;
@@ -173,22 +173,22 @@
             hold-trigger-key-positions = <KEYS_R THUMBS_L THUMBS_R>;
             hold-trigger-on-release;
         };
-        cwl: caps_word_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CAPS WORD LAYER";
-            #binding-cells = <2>;
-            tapping-term-ms = <260>;
-            //quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&caps_word>;
-        };
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
-            bindings = <&kp OP_X>, <&kp OP_CCED>, <&kp LC(LG(OP_Q))>;
-        };
+        //cwl: caps_word_layer {
+        //    compatible = "zmk,behavior-hold-tap";
+        //    label = "CAPS WORD LAYER";
+        //    #binding-cells = <2>;
+        //    tapping-term-ms = <260>;
+        //    //quick-tap-ms = <0>;
+        //    flavor = "tap-preferred";
+        //    bindings = <&mo>, <&caps_word>;
+        //};
+        //td0: tap_dance_0 {
+        //    compatible = "zmk,behavior-tap-dance";
+        //    label = "TAP_DANCE_0";
+        //    #binding-cells = <0>;
+        //    tapping-term-ms = <150>;
+        //    bindings = <&kp OP_X>, <&kp OP_CCED>, <&kp LC(LG(OP_Q))>;
+        //};
     }; 
 
 
@@ -213,10 +213,10 @@
 //                     | LOWER/ | TAB / | CMD/ENTER |                   | NUMBER/ | MOUSE/ | RC+SPC|
 //                     | CLPBD H| LSHFT |                             | SPACE   |  W     | 
             bindings = <
-&kp TAB   &kp OP_AGRV  &kp OP_J        &kp OP_O             &kp OP_EACU        &kp OP_B                 &kp OP_F          &kp OP_D         &kp OP_L             &kp OP_QUOT     &kp OP_Q &kp BSPC
-&kp LSHFT &hll ARROW A &hml LCTRL OP_I &hml LALT OP_E       &hml LGUI OP_U     &kp OP_COMM              &kp OP_P          &hmr RGUI OP_T   &hmr RALT OP_S       &hmr RCTRL OP_R &kp OP_N &kp OP_CIR
-&kp F3    &kp OP_K     &kp OP_Y        &kp OP_EGRV          &kp OP_DOT         &hll SCREEN OP_W         &kp OP_G          &hsr RSHFT OP_C  &kp OP_M             &kp OP_H        &kp OP_V &kp OP_CCED
-                                       &lt LOWER CLIPB_HIST &hsl LSHFT TAB     &mt LGUI SPACE           &lt NUMBERS SPACE &lt MOUSE OP_Z   &kp OP_X
+&kp TAB   &kp OP_AGRV  &kp OP_J        &kp OP_O             &kp OP_EACU    &kp OP_B                 &kp OP_F          &kp OP_D         &kp OP_L       &kp OP_QUOT     &kp OP_Q &kp BSPC
+&kp LSHFT &hll ARROW A &hml LCTRL OP_I &hml LALT OP_E       &hml LGUI OP_U &kp OP_COMM              &kp OP_P          &hmr RGUI OP_T   &hmr RALT OP_S &hmr RCTRL OP_R &kp OP_N &kp OP_CIR
+&kp F3    &kp OP_K     &kp OP_Y        &kp OP_EGRV          &kp OP_DOT     &hll SCREEN OP_W         &kp OP_G          &hsr RSHFT OP_C  &kp OP_M       &kp OP_H        &kp OP_V &kp OP_CCED
+                                       &lt LOWER CLIPB_HIST &hsl LSHFT TAB &mt LGUI SPACE           &lt NUMBERS SPACE &lt MOUSE OP_Z   &kp OP_X
 
             //code pour utiler Caps_Word : &cwl MOUSE 0 (pas adapté à Optimot au 04/07/2022; les keycodes Qwerty sont pris en compte, et même si on peut
             // faire en sorte que certains keycodes ne désactivent pas Caps, je ne vois pas pour le moment comment faire pour que des keycodes
