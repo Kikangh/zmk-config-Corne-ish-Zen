@@ -240,7 +240,7 @@
             bindings = <                       
 &kp ESC &kp F1 &kp F2 &kp F3 &kp F4      &kp F5               &kp LA(LC(LS(OP_F)))     &kp LA(LC(LS(OP_D)))     &kp LA(LC(LS(OP_L)))      &kp LA(LC(LS(OP_QUOT))) &none                 &kp F12
 &kp F6  &kp F7 &kp F8 &kp F9 &kp F10     &kp F11              &kp LA(LC(LS(OP_P)))     &kp LA(LC(LS(LEFT)))     &kp LA(LC(LS(UP)))        &kp LA(LC(LS(DOWN)))    &kp LA(LC(LS(RIGHT))) &kp LS(LA(LC(LG(OP_G))))
-&kp F1  &none  &none  &none  &kp LG(F12) &kp F12              &kp LA(LC(LS(OP_G)))     &kp LC(LG(OP_Q))         &kp LA(LC(LS(OP_M)))      &kp LA(LC(LS(OP_H)))    &none                 &kp LS(LA(LC(LG(OP_D))))
+&kp F3  &none  &none  &none  &kp LG(F12) &kp F12              &kp LA(LC(LS(OP_G)))     &kp LC(LG(OP_Q))         &kp LA(LC(LS(OP_M)))      &kp LA(LC(LS(OP_H)))    &none                 &kp LS(LA(LC(LG(OP_D))))
                       &trans &trans      &trans               &kp LG(LA(LC(LS(LEFT)))) &kp LG(LA(LC(LS(DOWN)))) &kp LG(LA(LC(LS(RIGHT)))) 
             >;
         };
@@ -283,10 +283,10 @@
 // | F10   | ??ê?? |  ;  |  :   |  .   |   &     |                   |  ,   |   No  |   No  |   H   |   No  |   #/% |
 //                     | LCTRL| LALT |CMD/space|                   | togg | RCTRL | RALT  |
             bindings = <            
-&kp ESC   &kp N1     &kp N2      &kp N3      &kp N4    &kp N5                   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
-&kp LSHFT &kp KP_N1  &kp KP_N2   &kp KP_N3   &kp KP_N4 &kp KP_N5                &kp KP_N6 &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0 &kp MINUS
-&kp CAPS  &kp OP_DLR &kp OP_SCLN &kp OP_COLN &trans    &kp LA(OP_T)             &kp G     &none     &none     &trans    &none     &kp EQUAL
-                                    &kp RALT &kp LSHFT &mt LGUI SPACE           &trans    &kp RALT  &kp RCTRL
+&kp ESC   &kp N1     &kp N2           &kp N3          &kp N4          &kp N5                   &kp N6      &kp N7          &kp N8          &kp N9           &kp N0    &kp BSPC
+&kp LSHFT &kp KP_N1  &hml LCTRL KP_N2 &hml LALT KP_N3 &hml LGUI KP_N4 &kp KP_N5                &kp KP_N6   &hmr RGUI KP_N7 &hmr RALT KP_N8 &hmr RCTRL KP_N9 &kp KP_N0 &kp OP_AT
+&kp CAPS  &kp OP_DLR &kp OP_SCLN      &kp OP_COLN     &trans          &kp LA(OP_T)             &kp OP_COMM &kp OP_HASH     &kp OP_AT       &trans           &none     &kp OP_HASH
+                                      &kp RALT        &kp LSHFT       &mt LGUI SPACE           &trans      &kp LALT        &kp RCTRL
             >;
         };
 
@@ -300,10 +300,10 @@
 // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR                   &kp LC(LS(O))     &kp C_PREV         &kp C_PP       &kp C_NEXT         &trans         &trans
-&none &bt BT_SEL 4 &none        &none        &none        &none                        &kp LC(LS(S))     &kp LG(LC(LS(N4))) &kp LG(LS(N4)) &kp LG(LC(LS(N3))) &kp LG(LS(N3)) &trans
-&none &none        &none        &none        &none        &trans                       &kp LG(LS(COMMA)) &kp LG(LS(N9))     &kp RG(RS(UP)) &kp RG(RS(DOWN))   &kp LG(LS(N0)) &trans
-                                &bt BT_CLR   &none        &none                        &kp SPACE         &trans             &trans  
+&none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR                   &kp LC(LS(OP_QUOT)) &kp C_PREV         &kp C_PP       &kp C_NEXT         &trans         &trans
+&none &bt BT_SEL 4 &none        &none        &none        &none                        &kp LC(LS(S))       &kp LG(LC(LS(N4))) &kp LG(LS(N4)) &kp LG(LC(LS(N3))) &kp LG(LS(N3)) &trans
+&none &none        &none        &none        &none        &trans                       &kp LG(LS(OP_M))    &kp RG(RS(UP)) &kp RG(RS(DOWN))   &kp LG(LS(N9))     &kp LG(LS(N0)) &trans
+                                &none.       &none        &none                        &kp SPACE           &kp LG(OP_COMM)    &kp LG(OP_DOT)  
             >;
         };
    };

@@ -21,7 +21,7 @@
         compatible = "zmk,combos";
 
 // Spacing combos
-COMBO(ret,        &kp RET,              18 30,         OPTIM ARROW NUMBERS, 50, 0) //require-prior-idle-ms to 0 instead of 80, to try and prevent accidental input of "pg" instead of sending "Return" 
+COMBO(ret,        &kp RET,              18 30,         OPTIM ARROW NUMBERS, 150, 0) // require-prior-idle-ms to 0 instead of 80, & TERM to 150, to try and prevent accidental input of "pg" instead of sending "Return"
 COMBO(ret2,       &kp RET,              16 28,         OPTIM ARROW NUMBERS, 50, 100)
 COMBO(del,        &kp DEL,               6 18,         OPTIM NUMBERS, 50, 100)
 COMBO(bspc,       &kp BSPC,              7 19,         OPTIM ARROW NUMBERS, 50, 100)
