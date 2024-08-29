@@ -30,8 +30,8 @@
 #define OPTIM   0
 #define LOWER   1
 #define MOUSE   2
-#define ARROW   3
-#define NUMBERS 4
+#define NUMBERS 3
+#define ARROW   4
 #define SCREEN  5
 
 #include "combos.dtsi" // This include **has** to be made **after** the layers' define, else it won't compile.
@@ -260,21 +260,6 @@
             >;
         };
 
-        arrow_layer {
-        display-name = "ARROW";
-// ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-// | TO 0  | none| LeftDesk | RightDesk    | WkfyMirror  |  BSPC         |                   |  @   |  Rycst-MenuCmd  |  none  |  none   |  q    |  BSPC    |
-// | Trans |Trans|          |              |             |  1PassWD  |                   |  #   |  Left           |  UP    |  Down   | Right |  None    |
-// | RESET  |     | HookCpyLk  | HookCpyMDLk  | HookToLink |   Hook     |                    |  ??ê?? |  $/€             |WkfyMvUP|WkfyMvDwn|TxTXSearch|TxTXDisable|
-//                          |              | LSHFT / Home |  trans       |                   |  SPC | END |WkfyNext|
-            bindings = <
-&to 0       &none  &kp OMNIPLIDENTL      &kp OMNIPLIDENTR      &kp  LG(LS(COMMA))    &kp BSPC                      &kp OP_AT            &kp LS(LA(LG(N8))) &none     &none     &q_minuscule         &kp BSPC
-&trans      &trans &kp LCTRL             &kp LALT              &kp  LGUI             &kp ONEPWDQUICK               &kp OP_HASH          &kp LEFT           &kp UP    &kp DOWN  &kp RIGHT            &q_maj
-&bootloader &none  &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LG(LS(SPACE))             &kp NON_US_BACKSLASH &kp OP_DLR         &kp PG_UP &kp PG_DN &kp RG(LS(LA(OP_F))) &kp RA(RC(RG(OP_T)))
-                                         &kp LC(LEFT)          &hsl LSHFT HOME       &trans                        &hmr RSHFT SPACE     &kp HOME           &kp END
-            >;
-        };
-
         numbers_layer {
         display-name = "NUMBERS";
 // ------------------------------------------------------------------------------------------------------------
@@ -283,10 +268,25 @@
 // | F10   | ??ê?? |  ;  |  :   |  .   |   &     |                   |  ,   |   No  |   No  |   H   |   No  |   #/% |
 //                     | LCTRL| LALT |CMD/space|                   | togg | RCTRL | RALT  |
             bindings = <            
-&kp ESC   &kp N1     &kp N2           &kp N3          &kp N4          &kp N5                   &kp N6      &kp N7          &kp N8          &kp N9           &kp N0    &kp BSPC
-&kp LSHFT &kp KP_N1  &hml LCTRL KP_N2 &hml LALT KP_N3 &hml LGUI KP_N4 &kp KP_N5                &kp KP_N6   &hmr RGUI KP_N7 &hmr RALT KP_N8 &hmr RCTRL KP_N9 &kp KP_N0 &kp OP_AT
-&kp CAPS  &kp OP_DLR &kp OP_SCLN      &kp OP_COLN     &trans          &kp LA(OP_T)             &kp OP_COMM &kp OP_HASH     &kp OP_AT       &trans           &none     &kp OP_HASH
-                                      &kp RALT        &kp LSHFT       &mt LGUI SPACE           &trans      &kp LALT        &kp RCTRL
+&kp ESC   &kp N1               &kp N2           &kp N3          &kp N4          &kp N5                   &kp N6      &kp N7          &kp N8          &kp N9           &kp N0    &kp BSPC
+&kp LSHFT &hll ARROW KP_N1     &hml LCTRL KP_N2 &hml LALT KP_N3 &hml LGUI KP_N4 &kp KP_N5                &kp KP_N6   &hmr RGUI KP_N7 &hmr RALT KP_N8 &hmr RCTRL KP_N9 &kp KP_N0 &kp OP_AT
+&kp CAPS  &kp NON_US_BACKSLASH &kp OP_SCLN      &kp OP_COLN     &trans          &kp LA(OP_T)             &kp OP_COMM &kp OP_HASH     &kp OP_AT       &trans           &none     &kp OP_HASH
+                                                &kp RALT        &kp LSHFT       &mt LGUI SPACE           &trans      &kp LALT        &kp RCTRL
+            >;
+        };
+
+        arrow_layer {
+        display-name = "ARROW";
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+// | TO 0  | none| LeftDesk | RightDesk    | WkfyMirror  |  BSPC         |                   |  @   |  Rycst-MenuCmd  |  none  |  none   |  q    |  BSPC    |
+// | Trans |Trans|          |              |             |  1PassWD  |                   |  #   |  Left           |  UP    |  Down   | Right |  None    |
+// | RESET  |     | HookCpyLk  | HookCpyMDLk  | HookToLink |   Hook     |                    |  ??ê?? |  $/€             |WkfyMvUP|WkfyMvDwn|TxTXSearch|TxTXDisable|
+//                          |              | LSHFT / Home |  trans       |                   |  SPC | END |WkfyNext|
+            bindings = <
+&to 0       &none  &kp OMNIPLIDENTL      &kp OMNIPLIDENTR      &kp  LG(LS(COMMA))    &kp BSPC                      &kp OP_AT      &kp LS(LA(LG(N8))) &none     &none     &q_minuscule         &kp BSPC
+&trans      &trans &kp LCTRL             &kp LALT              &kp  LGUI             &kp ONEPWDQUICK               &kp OP_HASH    &kp LEFT           &kp UP    &kp DOWN  &kp RIGHT            &q_maj
+&bootloader &none  &kp LG(LC(LA(SPACE))) &kp LS(LA(LG(SPACE))) &kp LC(LS(LG(SPACE))) &kp LG(LS(SPACE))             &kp LS(OP_DLR) &kp OP_DLR         &kp PG_UP &kp PG_DN &kp RG(LS(LA(OP_F))) &kp RA(RC(RG(OP_T)))
+                                         &trans                &trans                &trans                        &trans         &kp HOME           &kp END
             >;
         };
 
