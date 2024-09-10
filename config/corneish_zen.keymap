@@ -268,10 +268,10 @@
 // | F10   | ??ê?? |  ;  |  :   |  .   |   &     |                   |  ,   |   No  |   No  |   H   |   No  |   #/% |
 //                     | LCTRL| LALT |CMD/space|                   | togg | RCTRL | RALT  |
             bindings = <            
-&kp ESC   &kp N1               &kp N2           &kp N3          &kp N4          &kp N5                   &kp N6      &kp N7          &kp N8          &kp N9           &kp N0    &kp BSPC
-&kp LSHFT &hll ARROW KP_N1     &hml LCTRL KP_N2 &hml LALT KP_N3 &hml LGUI KP_N4 &kp KP_N5                &kp KP_N6   &hmr RGUI KP_N7 &hmr RALT KP_N8 &hmr RCTRL KP_N9 &kp KP_N0 &kp OP_AT
-&kp CAPS  &kp NON_US_BACKSLASH &kp OP_SCLN      &kp OP_COLN     &trans          &kp LA(OP_T)             &kp OP_COMM &kp OP_HASH     &kp OP_AT       &trans           &none     &kp OP_HASH
-                                                &kp RALT        &kp LSHFT       &mt LGUI SPACE           &trans      &kp LALT        &kp RCTRL
+&kp ESC   &kp N1               &kp N2           &kp N3          &kp N4          &kp N5                   &kp N6      &kp N7              &kp N8          &kp N9           &kp N0    &kp BSPC
+&kp LSHFT &hll ARROW KP_N1     &hml LCTRL KP_N2 &hml LALT KP_N3 &hml LGUI KP_N4 &kp KP_N5                &kp KP_N6   &hmr RGUI KP_N7     &hmr RALT KP_N8 &hmr RCTRL KP_N9 &kp KP_N0 &kp OP_AT
+&kp CAPS  &kp NON_US_BACKSLASH &kp OP_SCLN      &kp OP_COLN     &trans          &kp LA(OP_T)             &kp OP_COMM &hsr RSHFT  OP_HASH &kp OP_AT       &trans           &none     &kp OP_HASH
+                                                &kp RALT        &kp LSHFT       &mt LGUI SPACE           &trans      &kp LALT            &kp RCTRL
             >;
         };
 
