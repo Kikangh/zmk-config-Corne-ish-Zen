@@ -58,7 +58,7 @@ COMBO(op-redo,    &kp LG(LS(OP_Z)),     15 27,         OPTIM, 50, 100)
 
 // Windows Management combos
 COMBO(applist,      &kp RC(SPACE),      28 29,         OPTIM, 50, 100)
-COMBO(appwindows    &kp LG(OP_DLR),      4  5,         OPTIM, 50, 100)
+COMBO(appwindows,   &kp LG(OP_DLR),      4  5,         OPTIM, 50, 100)
 
 // Application specifics shorcuts
     //OmniPlan
