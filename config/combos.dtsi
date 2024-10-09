@@ -46,7 +46,7 @@ COMBO(op_plus,    &kp OP_PLUS,          26 27,         OPTIM ARROW NUMBERS, 50, 
 // Layers combos
 COMBO(lay-arrow,  &tog ARROW,           2  3  4,       OPTIM ARROW, 50, 100)
 COMBO(lay-number, &tog NUMBERS,         7 8 9,         OPTIM ARROW NUMBERS, 50, 100)
-COMBO(to-0,       &to 0,                26 27 28,      ARROW, 50, 100)
+COMBO(to-0,       &to 0,                26 27 28,      ARROW NUMBERS, 50, 100)
 
 // Editing combos
 COMBO(op-cut,     &kp LG(LBKT),          2 14,         OPTIM, 50, 100)
