@@ -171,7 +171,7 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
             require-prior-idle-ms = <125>;
-            hold-trigger-key-positions = <3 14 15 16 25 THUMBS_L>;
+            hold-trigger-key-positions = <3 15 16 25 THUMBS_L>; //retrait de la touche 14, car elle correspont à la lettre I, et c'est gênant avec le nom de mon entreprise, car le roll entre x et i bouge la souris.
             hold-trigger-on-release;
         };
         hll: homerow_layer_l {
