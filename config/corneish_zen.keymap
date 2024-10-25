@@ -156,12 +156,11 @@
             label = "ALPHA_SFT_R";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <100>; //trying to see if quick right hm shift with X works better with 100 instead of 150. Note : since I moved X from inner left thumb key, this change might not be a good idea anymore.
-            flavor = "balanced";
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS_L>;
-            hold-trigger-on-release;
-        };
+        };   
         hlr: homerow_layer_r {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_LAYER_R";
@@ -171,7 +170,7 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
             require-prior-idle-ms = <125>;
-            hold-trigger-key-positions = <3 15 16 25 THUMBS_L>; //retrait de la touche 14, car elle correspont à la lettre I, et c'est gênant avec le nom de mon entreprise, car le roll entre x et i bouge la souris.
+            hold-trigger-key-positions = <KEYS_L THUMBS_L>;
             hold-trigger-on-release;
         };
         hll: homerow_layer_l {
@@ -226,10 +225,10 @@
 //                     | LOWER/ | TAB / | CMD/ENTER |                   | NUMBER/ | MOUSE/ | RC+SPC|
 //                     | CLPBD H| LSHFT |                             | SPACE   |  W     | 
             bindings = <
-&kp TAB   &kp OP_AGRV  &kp OP_J        &kp OP_O             &kp OP_EACU    &kp OP_B                 &kp OP_F          &kp OP_D        &kp OP_L        &kp OP_QUOT     &kp OP_Q &kp BSPC
-&kp LSHFT &hll ARROW A &hml LCTRL OP_I &hml LALT OP_E       &hml LGUI OP_U &kp OP_COMM              &kp OP_P          &hmr RGUI OP_T  &hmr RALT OP_S  &hmr RCTRL OP_R &kp OP_N &kp OP_CIR
-&kp F10   &kp OP_K     &kp OP_Y        &kp OP_EGRV          &kp OP_DOT     &hll SCREEN OP_W         &kp OP_G          &kp OP_C        &kp OP_M        &kp OP_H        &kp OP_V &kp OP_CCED
-                                       &lt LOWER CLIPB_HIST &hsl LSHFT TAB &mt LGUI SPACE           &lt NUMBERS SPACE &hsr RSHFT OP_Z &hlr MOUSE OP_X
+&kp TAB   &kp OP_AGRV  &kp OP_J        &kp OP_O             &kp OP_EACU    &kp OP_B                 &kp OP_F           &kp OP_D        &kp OP_L        &kp OP_QUOT     &kp OP_Q &kp BSPC
+&kp LSHFT &hll ARROW A &hml LCTRL OP_I &hml LALT OP_E       &hml LGUI OP_U &kp OP_COMM              &kp OP_P           &hmr RGUI OP_T  &hmr RALT OP_S  &hmr RCTRL OP_R &kp OP_N &kp OP_CIR
+&kp F10   &kp OP_K     &kp OP_Y        &kp OP_EGRV          &kp OP_DOT     &hll SCREEN OP_W         &kp OP_G           &hsr RSHFT OP_C &kp OP_M        &kp OP_H        &kp OP_V &kp OP_CCED
+                                       &lt LOWER CLIPB_HIST &hsl LSHFT TAB &mt LGUI SPACE           &hlr NUMBERS SPACE &hlr MOUSE OP_Z &kp OP_X
 
             //code pour utiler Caps_Word : &cwl MOUSE 0 (pas adapté à Optimot au 04/07/2022; les keycodes Qwerty sont pris en compte, et même si on peut
             // faire en sorte que certains keycodes ne désactivent pas Caps, je ne vois pas pour le moment comment faire pour que des keycodes
@@ -276,10 +275,10 @@
 // | F10   | ??ê?? |  ;  |  :   |  .   |   &     |                   |  ,   |   No  |   No  |   H   |   No  |   #/% |
 //                     | LCTRL| LALT |CMD/space|                   | togg | RCTRL | RALT  |
             bindings = <            
-&to 0     &kp N1               &kp N2           &kp N3          &kp N4          &kp N5                   &kp N6      &kp N7          &kp N8          &kp N9           &kp N0    &kp BSPC
-&kp LSHFT &hll ARROW KP_N1     &hml LCTRL KP_N2 &hml LALT KP_N3 &hml LGUI KP_N4 &kp KP_N5                &kp KP_N6   &hmr RGUI KP_N7 &hmr RALT KP_N8 &hmr RCTRL KP_N9 &kp KP_N0 &kp OP_AT
-&kp CAPS  &kp NON_US_BACKSLASH &kp OP_SCLN      &kp OP_COLN     &trans          &kp LA(OP_T)             &kp OP_COMM &kp OP_HASH     &kp OP_AT       &trans           &none     &kp OP_HASH
-                                                &kp RALT        &kp LSHFT       &mt LGUI SPACE           &trans      &kp RSHFT       &none
+&to 0     &kp N1               &kp N2           &kp N3          &kp N4          &kp N5                   &kp N6      &kp N7             &kp N8          &kp N9           &kp N0    &kp BSPC
+&kp LSHFT &hll ARROW KP_N1     &hml LCTRL KP_N2 &hml LALT KP_N3 &hml LGUI KP_N4 &kp KP_N5                &kp KP_N6   &hmr RGUI KP_N7    &hmr RALT KP_N8 &hmr RCTRL KP_N9 &kp KP_N0 &kp OP_AT
+&kp CAPS  &kp NON_US_BACKSLASH &kp OP_SCLN      &kp OP_COLN     &trans          &kp LA(OP_T)             &kp OP_COMM &hsr RSHFT OP_HASH &kp OP_AT       &trans           &none     &kp OP_HASH
+                                                &kp RALT        &kp LSHFT       &mt LGUI SPACE           &trans      &kp RALT           &none
             >;
         };
 
