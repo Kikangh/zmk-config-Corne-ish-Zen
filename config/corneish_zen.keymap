@@ -148,7 +148,7 @@
             quick-tap-ms = <150>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R KEYS_L THUMBS_L>;
+            hold-trigger-key-positions = <KEYS_R KEYS_L THUMBS_R>;
             //hold-trigger-on-release;
         };
         hsr: homerow_shift_r {
